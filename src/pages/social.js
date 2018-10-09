@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import Topper from "../components/Topper"
 import ContentHolder from "../components/contentholder"
 import GraphicHeader from "../components/graphicheader"
+import BlurbMain from "../components/blurbmain"
+import ColourSection from "../components/coloursection"
 
 export default () => (
   <Layout>
@@ -16,6 +18,10 @@ export default () => (
         alt="twitter birds flying out of box"
         headerText="Social media management"
       />
+      <BlurbMain />
     </ContentHolder>
+    <ColourSection color="#C2E7FA" />
+    <ColourSection color="#CCCCD0" />
+    <ColourSection color="#FDC5E1" />
   </Layout>
 )
