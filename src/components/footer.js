@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-const Footer = styled.div`
+const Footer = styled.footer`
   background: ${props => props.color};
-  height: 17vh;
-  width: 100%;
-  position: absolute;
   bottom: 0;
+  height: 17vh;
   left: 0;
+  position: absolute;
+  width: 100%;
   /* :before {
     background: inherit;
     bottom: 0;
@@ -23,4 +23,16 @@ const Footer = styled.div`
   clip-path: polygon(0 45%, 100% 0, 100% 100%, 0% 100%);
 `
 
-export default props => <Footer color={props.color} />
+const FooterCopy = styled.h6`
+  bottom: 0;
+  color: #fefefe;
+  font-weight: 100;
+  position: absolute;
+  right: 2vw;
+`
+
+export default props => (
+  <Footer color={props.color}>
+    <FooterCopy>&copy; Big Tent Media</FooterCopy>
+  </Footer>
+)
