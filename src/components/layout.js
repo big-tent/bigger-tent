@@ -7,8 +7,6 @@ import Iconlinks from "./iconlinks"
 const LayoutWrapper = styled.div``
 
 const Wrapper = styled.section`
-  /* display: flex;
-  justify-content: center; */
   height: 100%;
   position: relative;
   width: 100vw;

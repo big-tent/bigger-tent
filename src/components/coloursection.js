@@ -8,4 +8,25 @@ const ColouredContainer = styled.section`
   width: 100vw;
 `
 
-export default props => <ColouredContainer color={props.color} />
+const ContentWrapper = styled.div`
+  width: 70%;
+  position: absolute;
+  margin: 0 15%;
+  top: 45%;
+`
+
+export default props => (
+  <ColouredContainer color={props.color}>
+    <ContentWrapper>
+      <h3>shoreditch austin green juice</h3>
+      <p>
+        Master cleanse fashion axe bicycle rights, cliche dreamcatcher direct
+        trade letterpress keytar ramps. Bespoke forage four loko, street art
+        ennui tattooed aesthetic banh mi seitan vinyl butcher. Taxidermy plaid
+        chia hell of flannel authentic disrupt. Thundercats seitan cred
+        readymade la croix selvage pour-over copper mug kombucha plaid pok pok
+        shoreditch austin green juice.
+      </p>
+    </ContentWrapper>
+  </ColouredContainer>
+)

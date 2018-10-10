@@ -8,6 +8,7 @@ import ContentHolder from "../components/contentholder"
 import GraphicHeader from "../components/graphicheader"
 import BlurbMain from "../components/blurbmain"
 import ColourSection from "../components/coloursection"
+import Footer from "../components/footer"
 
 export default () => (
   <Layout>
@@ -23,5 +24,6 @@ export default () => (
     <ColourSection color="#C2E7FA" />
     <ColourSection color="#CCCCD0" />
     <ColourSection color="#FDC5E1" />
+    <Footer color="#f2309b" />
   </Layout>
 )
