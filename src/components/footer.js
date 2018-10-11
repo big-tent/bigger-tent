@@ -6,7 +6,7 @@ const Footer = styled.footer`
   bottom: 0;
   height: 17vh;
   left: 0;
-  position: absolute;
+  position: relative;
   width: 100%;
   /* :before {
     background: inherit;
