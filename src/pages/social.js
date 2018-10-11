@@ -21,9 +21,9 @@ export default () => (
       />
       <BlurbMain />
     </ContentHolder>
-    <ColourSection color="#C2E7FA" />
-    <ColourSection color="#CCCCD0" />
-    <ColourSection color="#FDC5E1" />
+    <ColourSection color="hsla(200, 85%, 87%, 0.4)" />
+    <ColourSection color="hsla(240, 4%, 80%, 0.4)" />
+    <ColourSection color="hsla(330, 93%, 88%, 0.4)" />
     <Footer color="#f2309b" />
   </Layout>
 )
