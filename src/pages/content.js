@@ -10,7 +10,7 @@ import ContentHolder from "../components/contentholder"
 
 export default () => (
   <Layout>
-    <Topper color="#f2ce05" />
+    <Topper color="#f2ba05" />
     <ContentHolder>
       <GraphicHeader
         src={undrawbuild}

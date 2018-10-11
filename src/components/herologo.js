@@ -48,7 +48,7 @@ const LinksContainer = styled.div`
           border-color: #37378c;
         }
         :last-of-type {
-          border-color: #f2ce05;
+          border-color: #f2ba05;
         }
       }
     }
