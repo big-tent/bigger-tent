@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Topper from "../components/Topper"
 import ContentHolder from "../components/contentholder"
 import GraphicHeader from "../components/graphicheader"
-import BlurbMain from "../components/blurbmain"
+import BlurbMain from "../components/Blurbmain"
 import ContentContainer from "../components/contentcontainer"
 import Footer from "../components/footer"
 
