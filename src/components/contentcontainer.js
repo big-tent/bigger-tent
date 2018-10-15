@@ -8,7 +8,7 @@ import tablet from "../svg/tablet.svg"
 import wallet from "../svg/wallet.svg"
 import clean from "../svg/clean.svg"
 
-import ContentBox from "../components/contentbox"
+import ContentBox from "./ContentBox"
 
 const Container = styled.section`
   display: grid;

@@ -2,11 +2,10 @@ import React from "react"
 
 import undrawbuild from "../svg/undrawbuild.svg"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Topper from "../components/Topper"
-import GraphicHeader from "../components/graphicheader"
-
-import ContentHolder from "../components/contentholder"
+import GraphicHeader from "../components/GraphicHeader"
+import ContentHolder from "../components/ContentHolder"
 
 export default () => (
   <Layout>

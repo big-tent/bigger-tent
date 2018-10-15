@@ -2,13 +2,13 @@ import React from "react"
 
 import undrawweb from "../svg/undrawweb.svg"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Topper from "../components/Topper"
-import ContentHolder from "../components/contentholder"
-import GraphicHeader from "../components/graphicheader"
-import BlurbMain from "../components/Blurbmain"
-import ContentContainer from "../components/contentcontainer"
-import Footer from "../components/footer"
+import ContentHolder from "../components/ContentHolder"
+import GraphicHeader from "../components/GraphicHeader"
+import BlurbMain from "../components/BlurbMain"
+import ContentContainer from "../components/ContentContainer"
+import Footer from "../components/Footer"
 
 export default () => (
   <Layout>

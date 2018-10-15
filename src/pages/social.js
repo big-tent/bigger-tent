@@ -2,13 +2,13 @@ import React from "react"
 
 import undrawtwitter from "../svg/undrawtwitter.svg"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Topper from "../components/Topper"
-import ContentHolder from "../components/contentholder"
-import GraphicHeader from "../components/graphicheader"
-import BlurbMain from "../components/blurbmain"
-import ColourSection from "../components/coloursection"
-import Footer from "../components/footer"
+import ContentHolder from "../components/ContentHolder"
+import GraphicHeader from "../components/GraphicHeader"
+import BlurbMain from "../components/BlurbMain"
+import ColourSection from "../components/ColourSection"
+import Footer from "../components/Footer"
 
 export default () => (
   <Layout>

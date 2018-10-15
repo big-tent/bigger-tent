@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/layout"
-import HeroLogo from "../components/herologo"
+import Layout from "../components/Layout"
+import HeroLogo from "../components/HeroLogo"
 
 const BackgroundImage = styled(Img)`
   height: 100vh;

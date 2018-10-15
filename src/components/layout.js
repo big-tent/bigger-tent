@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-import Nav from "./nav"
-import Iconlinks from "./iconlinks"
+import Nav from "./Nav"
+import Iconlinks from "./IconLinks"
 
 const LayoutWrapper = styled.div``
 
