@@ -12,10 +12,14 @@ const Wrapper = styled.section`
   width: 100vw;
 `
 
-export default ({ children }) => (
+export default ({ children, location }) => (
   <LayoutWrapper>
-    <Nav />
+    <Nav location={location} />
     <Iconlinks />
     <Wrapper>{children}</Wrapper>
+    <h1>
+      location is
+      {location.pathname}
+    </h1>
   </LayoutWrapper>
 )

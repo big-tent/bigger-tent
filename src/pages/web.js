@@ -10,8 +10,8 @@ import BlurbMain from "../components/BlurbMain"
 import ContentContainer from "../components/ContentContainer"
 import Footer from "../components/Footer"
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Topper color="#37378c" />
     <ContentHolder>
       <GraphicHeader

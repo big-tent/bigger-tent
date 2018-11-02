@@ -27,14 +27,14 @@ const Form = styled.form`
 
 const Input = styled.input`
   font-family: "Lato", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 20px;
   padding: 10px;
   width: 100%;
 `
 const Message = styled.textarea`
   font-family: "Lato", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   height: 200px;
   margin-bottom: 20px;
   padding: 10px;
@@ -48,8 +48,8 @@ const ButtonHolder = styled.div`
 `
 
 const Submit = styled.input`
-  background: #86ab45;
-  border-color: #86ab45;
+  background: green;
+  border-color: green;
   border-radius: 5px;
   border-style: outset;
   color: #fff;
@@ -63,7 +63,7 @@ const Submit = styled.input`
 `
 
 const HomeButton = styled.button`
-  background: #4189c8;
+  background: red;
   border-radius: 5px;
   color: #fff;
   display: flex;
@@ -85,8 +85,8 @@ const Label = styled.label`
   }
 `
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Topper color="black" />
     <ContactWrapper>
       <Form name="contact" method="POST" netlify>

@@ -18,8 +18,8 @@ const AboutWrapper = styled.div`
   width: 100vw;
 `
 
-export default ({ data }) => (
-  <Layout>
+export default ({ data, location }) => (
+  <Layout location={location}>
     <AboutWrapper>
       <Topper color="#fefefe" />
       <Header headerText="About us" />

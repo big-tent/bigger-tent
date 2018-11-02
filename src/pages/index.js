@@ -15,8 +15,8 @@ const BackgroundImage = styled(Img)`
   top: 0;
 `
 
-export default ({ data }) => (
-  <Layout>
+export default ({ data, location }) => (
+  <Layout location={location}>
     <BackgroundImage
       fluid={data.backgroundImage.childImageSharp.fluid}
       alt="campfire"

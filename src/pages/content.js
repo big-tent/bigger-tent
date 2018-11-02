@@ -7,8 +7,8 @@ import Topper from "../components/Topper"
 import GraphicHeader from "../components/GraphicHeader"
 import ContentHolder from "../components/ContentHolder"
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Topper color="#f2ba05" />
     <ContentHolder>
       <GraphicHeader
