@@ -21,7 +21,7 @@ const AboutWrapper = styled.div`
 export default ({ data, location }) => (
   <Layout location={location}>
     <AboutWrapper>
-      <Topper color="#fefefe" />
+      <Topper color="black" />
       <Header headerText="About us" />
       <p>About {data.site.siteMetadata.title}</p>
     </AboutWrapper>

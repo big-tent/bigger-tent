@@ -17,9 +17,5 @@ export default ({ children, location }) => (
     <Nav location={location} />
     <Iconlinks />
     <Wrapper>{children}</Wrapper>
-    <h1>
-      location is
-      {location.pathname}
-    </h1>
   </LayoutWrapper>
 )

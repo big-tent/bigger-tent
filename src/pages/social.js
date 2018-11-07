@@ -17,7 +17,7 @@ export default ({ location }) => (
       <GraphicHeader
         src={undrawtwitter}
         alt="twitter birds flying out of box"
-        headerText="Social media management"
+        headerText="Social media magic"
       />
       <BlurbMain />
     </ContentHolder>

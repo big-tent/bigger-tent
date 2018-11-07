@@ -25,33 +25,131 @@ const NavLink = styled(Link)`
 `
 
 export default class Navbar extends Component {
-  componentDidUpdate = ({ location }) => {
-    console.log(location.pathname)
-  }
-
   render() {
     const { location } = this.props
-    return (
-      <Nav>
-        <LogoLink to="/">
-          <h3>Big Tent</h3>
-        </LogoLink>
-        <NavLink to="/">
-          <h6>home</h6>
-        </NavLink>
-        <NavLink to="/about">
-          <h6>about us</h6>
-        </NavLink>
-        <NavLink to="/web">
-          <h6>web</h6>
-        </NavLink>
-        <NavLink to="/social">
-          <h6>social</h6>
-        </NavLink>
-        <NavLink to="/content">
-          <h6>content</h6>
-        </NavLink>
-      </Nav>
-    )
+    if (location.pathname === "/") {
+      return (
+        <Nav>
+          <LogoLink to="/">
+            <h3>Big Tent</h3>
+          </LogoLink>
+          <NavLink to="/about">
+            <h6>about us</h6>
+          </NavLink>
+          <NavLink to="/web">
+            <h6>web</h6>
+          </NavLink>
+          <NavLink to="/social">
+            <h6>social</h6>
+          </NavLink>
+          <NavLink to="/content">
+            <h6>content</h6>
+          </NavLink>
+        </Nav>
+      )
+    } else if (location.pathname === "/about") {
+      return (
+        <Nav>
+          <LogoLink to="/">
+            <h3>Big Tent</h3>
+          </LogoLink>
+          <NavLink to="/">
+            <h6>home</h6>
+          </NavLink>
+          <NavLink to="/web">
+            <h6>web</h6>
+          </NavLink>
+          <NavLink to="/social">
+            <h6>social</h6>
+          </NavLink>
+          <NavLink to="/content">
+            <h6>content</h6>
+          </NavLink>
+        </Nav>
+      )
+    } else if (location.pathname === "/web") {
+      return (
+        <Nav>
+          <LogoLink to="/">
+            <h3>Big Tent</h3>
+          </LogoLink>
+          <NavLink to="/">
+            <h6>home</h6>
+          </NavLink>
+          <NavLink to="/about">
+            <h6>about</h6>
+          </NavLink>
+          <NavLink to="/social">
+            <h6>social</h6>
+          </NavLink>
+          <NavLink to="/content">
+            <h6>content</h6>
+          </NavLink>
+        </Nav>
+      )
+    } else if (location.pathname === "/social") {
+      return (
+        <Nav>
+          <LogoLink to="/">
+            <h3>Big Tent</h3>
+          </LogoLink>
+          <NavLink to="/">
+            <h6>home</h6>
+          </NavLink>
+          <NavLink to="/about">
+            <h6>about</h6>
+          </NavLink>
+          <NavLink to="/web">
+            <h6>web</h6>
+          </NavLink>
+          <NavLink to="/content">
+            <h6>content</h6>
+          </NavLink>
+        </Nav>
+      )
+    } else if (location.pathname === "/content") {
+      return (
+        <Nav>
+          <LogoLink to="/">
+            <h3>Big Tent</h3>
+          </LogoLink>
+          <NavLink to="/">
+            <h6>home</h6>
+          </NavLink>
+          <NavLink to="/about">
+            <h6>about</h6>
+          </NavLink>
+          <NavLink to="/web">
+            <h6>web</h6>
+          </NavLink>
+          <NavLink to="/social">
+            <h6>social</h6>
+          </NavLink>
+        </Nav>
+      )
+    } else {
+      return (
+        <Nav>
+          <LogoLink to="/">
+            <h3>Big Tent</h3>
+          </LogoLink>
+          <NavLink to="/">
+            <h6>home</h6>
+          </NavLink>
+          <NavLink to="/about">
+            <h6>about</h6>
+          </NavLink>
+          <NavLink to="/web">
+            <h6>web</h6>
+          </NavLink>
+          <NavLink to="/social">
+            <h6>social</h6>
+          </NavLink>
+          <NavLink to="/content">
+            <h6>content</h6>
+          </NavLink>
+        </Nav>
+      )
+    }
   }
 }
