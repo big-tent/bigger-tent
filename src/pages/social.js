@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import undrawtwitter from "../svg/undrawtwitter.svg"
 
@@ -11,7 +11,7 @@ import BlurbMain from "../components/BlurbMain"
 import ColourSection from "../components/ColourSection"
 import Footer from "../components/Footer"
 
-export default ({ location }) => (
+export default ({ location, data }) => (
   <Layout location={location}>
     <Topper color="#f2309b" />
     <ContentHolder>
@@ -20,24 +20,7 @@ export default ({ location }) => (
         alt="twitter birds flying out of box"
         headerText="Social media magic"
       />
-      <BlurbMain>
-        <StaticQuery
-          query={graphql`
-            query SocialQuery {
-              allMarkdownRemark {
-                edges {
-                  node {
-                    html
-                  }
-                }
-              }
-            }
-          `}
-          render={data => (
-            <div>{data.allMarkdownRemark.edges[1].node.html}</div>
-          )}
-        />
-      </BlurbMain>
+      <BlurbMain>{data.allMarkdownRemark.edges[1].node.html}</BlurbMain>
     </ContentHolder>
     <ColourSection color="hsla(200, 85%, 87%, 0.3)" />
     <ColourSection color="hsla(240, 4%, 80%, 0.3)" />
@@ -46,18 +29,14 @@ export default ({ location }) => (
   </Layout>
 )
 
-// export const query = graphql`
-//   query {
-//     allMarkdownRemark {
-//       edges {
-//         node {
-//           frontmatter {
-//             title
-//             date
-//           }
-//           html
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query SocialQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+        }
+      }
+    }
+  }
+`

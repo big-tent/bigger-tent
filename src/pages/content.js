@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import undrawbuild from "../svg/undrawbuild.svg"
 
@@ -9,7 +9,7 @@ import GraphicHeader from "../components/GraphicHeader"
 import ContentHolder from "../components/ContentHolder"
 import BlurbMain from "../components/BlurbMain"
 
-export default ({ location }) => (
+export default ({ location, data }) => (
   <Layout location={location}>
     <Topper color="#f2ba05" />
     <ContentHolder>
@@ -18,24 +18,19 @@ export default ({ location }) => (
         alt="building blocks illustration"
         headerText="Content creation"
       />
-      <BlurbMain>
-        <StaticQuery
-          query={graphql`
-            query ContentQuery {
-              allMarkdownRemark {
-                edges {
-                  node {
-                    html
-                  }
-                }
-              }
-            }
-          `}
-          render={data => (
-            <div>{data.allMarkdownRemark.edges[0].node.html}</div>
-          )}
-        />
-      </BlurbMain>
+      <BlurbMain>{data.allMarkdownRemark.edges[0].node.html}</BlurbMain>
     </ContentHolder>
   </Layout>
 )
+
+export const query = graphql`
+  query ContentQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+        }
+      }
+    }
+  }
+`

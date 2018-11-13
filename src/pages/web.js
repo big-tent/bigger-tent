@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import undrawweb from "../svg/undrawweb.svg"
 
@@ -11,7 +11,7 @@ import BlurbMain from "../components/BlurbMain"
 import ContentContainer from "../components/ContentContainer"
 import Footer from "../components/Footer"
 
-export default ({ location }) => (
+export default ({ location, data }) => (
   <Layout location={location}>
     <Topper color="#37378c" />
     <ContentHolder>
@@ -20,26 +20,21 @@ export default ({ location }) => (
         alt="web design illustration"
         headerText="Web design"
       />
-      <BlurbMain>
-        <StaticQuery
-          query={graphql`
-            query WebQuery {
-              allMarkdownRemark {
-                edges {
-                  node {
-                    html
-                  }
-                }
-              }
-            }
-          `}
-          render={data => (
-            <div>{data.allMarkdownRemark.edges[2].node.html}</div>
-          )}
-        />
-      </BlurbMain>
+      <BlurbMain>{data.allMarkdownRemark.edges[2].node.html}</BlurbMain>
       <ContentContainer />
     </ContentHolder>
     <Footer color="#37378c" />
   </Layout>
 )
+
+export const query = graphql`
+  query WebQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+        }
+      }
+    }
+  }
+`
