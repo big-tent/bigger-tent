@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 
 import undrawtwitter from "../svg/undrawtwitter.svg"
 
@@ -19,7 +20,24 @@ export default ({ location }) => (
         alt="twitter birds flying out of box"
         headerText="Social media magic"
       />
-      <BlurbMain />
+      <BlurbMain>
+        <StaticQuery
+          query={graphql`
+            query SocialQuery {
+              allMarkdownRemark {
+                edges {
+                  node {
+                    html
+                  }
+                }
+              }
+            }
+          `}
+          render={data => (
+            <div>{data.allMarkdownRemark.edges[1].node.html}</div>
+          )}
+        />
+      </BlurbMain>
     </ContentHolder>
     <ColourSection color="hsla(200, 85%, 87%, 0.3)" />
     <ColourSection color="hsla(240, 4%, 80%, 0.3)" />
@@ -27,3 +45,19 @@ export default ({ location }) => (
     <Footer color="#f2309b" />
   </Layout>
 )
+
+// export const query = graphql`
+//   query {
+//     allMarkdownRemark {
+//       edges {
+//         node {
+//           frontmatter {
+//             title
+//             date
+//           }
+//           html
+//         }
+//       }
+//     }
+//   }
+// `
