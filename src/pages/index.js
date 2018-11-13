@@ -34,5 +34,14 @@ export const query = graphql`
         }
       }
     }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
   }
 `
