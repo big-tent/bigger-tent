@@ -1,5 +1,5 @@
 ---
-title: "Social intro"
+title: "Social media magic"
 date: "13/11/18"
 ---
 

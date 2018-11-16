@@ -18,9 +18,9 @@ export default ({ location, data }) => (
       <GraphicHeader
         src={undrawtwitter}
         alt="twitter birds flying out of box"
-        headerText="Social media magic"
+        headerText={data.allMarkdownRemark.edges[2].node.frontmatter.title}
       />
-      <BlurbMain>{data.allMarkdownRemark.edges[1].node.html}</BlurbMain>
+      <BlurbMain>{data.allMarkdownRemark.edges[2].node.html}</BlurbMain>
     </ContentHolder>
     <ColourSection color="hsla(200, 85%, 87%, 0.3)" />
     <ColourSection color="hsla(240, 4%, 80%, 0.3)" />
@@ -35,6 +35,9 @@ export const query = graphql`
       edges {
         node {
           html
+          frontmatter {
+            title
+          }
         }
       }
     }
