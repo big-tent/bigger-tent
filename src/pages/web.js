@@ -20,7 +20,13 @@ export default ({ location, data }) => (
         alt="web design illustration"
         headerText="Web design"
       />
-      <BlurbMain>{data.allMarkdownRemark.edges[1].node.html}</BlurbMain>
+      <BlurbMain>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.allMarkdownRemark.edges[1].node.html
+          }}
+        />
+      </BlurbMain>
       <ContentContainer />
     </ContentHolder>
     <Footer color="#37378c" />

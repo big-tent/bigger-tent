@@ -18,7 +18,13 @@ export default ({ location, data }) => (
         alt="building blocks illustration"
         headerText="Content creation"
       />
-      <BlurbMain>{data.allMarkdownRemark.edges[0].node.html}</BlurbMain>
+      <BlurbMain>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.allMarkdownRemark.edges[0].node.html
+          }}
+        />
+      </BlurbMain>
     </ContentHolder>
   </Layout>
 )

@@ -20,7 +20,13 @@ export default ({ location, data }) => (
         alt="twitter birds flying out of box"
         headerText={data.allMarkdownRemark.edges[2].node.frontmatter.title}
       />
-      <BlurbMain>{data.allMarkdownRemark.edges[2].node.html}</BlurbMain>
+      <BlurbMain>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.allMarkdownRemark.edges[2].node.html
+          }}
+        />
+      </BlurbMain>
     </ContentHolder>
     <ColourSection color="hsla(200, 85%, 87%, 0.3)" />
     <ColourSection color="hsla(240, 4%, 80%, 0.3)" />
