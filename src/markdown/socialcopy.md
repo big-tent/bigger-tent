@@ -3,4 +3,4 @@ title: "Social media magic"
 date: "13/11/18"
 ---
 
-Social social social Pinterest mixtape truffaut deep v bicycle rights sartorial hell of succulents dreamcatcher art party lumbersexual. YOLO messenger bag umami kogi yuccie pork belly, marfa next level raw denim food truck wolf. Man braid blue bottle sustainable migas, everyday carry chia tousled kale chips offal asymmetrical palo santo vinyl keffiyeh tacos. Artisan art party four loko hell of XOXO. Raw denim single-origin coffee thundercats, kinfolk master cleanse taiyaki dreamcatcher. Activated charcoal cronut iceland meh hexagon street art austin ramps DIY.
+We want to put the social back into social media - it's about telling your story to the wider world, and interacting with the people who matter to you and your organisation. We'll help you bring these stories to life through video, animation and images, as well as crafting the words to get your message across. The power of social media is taking value from shared experiences, and we offer a range of flexible services to make the most of this opportunity.

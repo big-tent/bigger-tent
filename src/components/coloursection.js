@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 const ColouredContainer = styled.section`
   background: ${props => props.color};
-  /* clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%); */
   height: 15rem;
   width: 100vw;
   display: flex;

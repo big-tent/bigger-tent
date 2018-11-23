@@ -18,12 +18,12 @@ export default ({ location, data }) => (
       <GraphicHeader
         src={undrawtwitter}
         alt="twitter birds flying out of box"
-        headerText={data.allMarkdownRemark.edges[2].node.frontmatter.title}
+        headerText={data.file.childMarkdownRemark.frontmatter.title}
       />
       <BlurbMain>
         <div
           dangerouslySetInnerHTML={{
-            __html: data.allMarkdownRemark.edges[2].node.html
+            __html: data.file.childMarkdownRemark.html
           }}
         />
       </BlurbMain>
@@ -37,14 +37,12 @@ export default ({ location, data }) => (
 
 export const query = graphql`
   query SocialQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          html
-          frontmatter {
-            title
-          }
+    file(relativePath: { eq: "markdown/socialcopy.md" }) {
+      childMarkdownRemark {
+        frontmatter {
+          title
         }
+        html
       }
     }
   }
