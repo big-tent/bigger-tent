@@ -36,16 +36,8 @@ export default props => (
     <TopTriangle color={props.color} />
     <ColouredContainer color={props.color}>
       <ContentWrapper>
-        <h3>shoreditch austin green juice</h3>
-        <p>
-          90's master cleanse YOLO Wes Anderson Godard plaid pug Pitchfork
-          mumblecore cornhole banjo XOXO vinyl chia Odd Future keffiyeh
-          literally mustache Vice tote bag Pinterest deep v bicycle rights90's
-          master cleanse YOLO Wes Anderson Godard plaid pug Pitchfork mumblecore
-          cornhole banjo XOXO vinyl chia Odd Future keffiyeh literally mustache
-          Vice tote bag Pinterest deep v bicycle rights letterpress slow-carb
-          tattooed Williamsburg{" "}
-        </p>
+        <h3>{props.heading}</h3>
+        <div>{props.copy}</div>
       </ContentWrapper>
     </ColouredContainer>
     <BottomTriangle color={props.color} />

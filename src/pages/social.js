@@ -18,17 +18,32 @@ export default ({ location, data }) => (
       <GraphicHeader
         src={undrawtwitter}
         alt="twitter birds flying out of box"
-        headerText={data.file.childMarkdownRemark.frontmatter.title}
+        headerText={data.headerText.childMarkdownRemark.frontmatter.title}
       />
       <BlurbMain>
         <div
           dangerouslySetInnerHTML={{
-            __html: data.file.childMarkdownRemark.html
+            __html: data.headerText.childMarkdownRemark.html
           }}
         />
       </BlurbMain>
     </ContentHolder>
-    <ColourSection color="hsla(200, 85%, 87%, 0.3)" />
+    <div
+      dangerouslySetInnerHTML={{
+        __html: data.managementText.childMarkdownRemark.html
+      }}
+    />
+    <ColourSection
+      color="hsla(200, 85%, 87%, 0.3)"
+      heading={data.managementText.childMarkdownRemark.frontmatter.title}
+      copy={
+        <p
+          dangerouslySetInnerHTML={{
+            __html: data.managementText.childMarkdownRemark.html
+          }}
+        />
+      }
+    />
     <ColourSection color="hsla(240, 4%, 80%, 0.3)" />
     <ColourSection color="hsla(330, 93%, 88%, 0.3)" />
     <Footer color="#f2309b" />
@@ -37,7 +52,15 @@ export default ({ location, data }) => (
 
 export const query = graphql`
   query SocialQuery {
-    file(relativePath: { eq: "markdown/socialcopy.md" }) {
+    headerText: file(relativePath: { eq: "markdown/socialheader.md" }) {
+      childMarkdownRemark {
+        frontmatter {
+          title
+        }
+        html
+      }
+    }
+    managementText: file(relativePath: { eq: "markdown/socialmanagement.md" }) {
       childMarkdownRemark {
         frontmatter {
           title
