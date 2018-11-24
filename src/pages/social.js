@@ -28,11 +28,6 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
-    <div
-      dangerouslySetInnerHTML={{
-        __html: data.managementText.childMarkdownRemark.html
-      }}
-    />
     <ColourSection
       color="hsla(200, 85%, 87%, 0.3)"
       heading={data.managementText.childMarkdownRemark.frontmatter.title}
@@ -44,29 +39,53 @@ export default ({ location, data }) => (
         />
       }
     />
-    <ColourSection color="hsla(240, 4%, 80%, 0.3)" />
-    <ColourSection color="hsla(330, 93%, 88%, 0.3)" />
+    <ColourSection
+      color="hsla(240, 4%, 80%, 0.3)"
+      heading={data.consultancyText.childMarkdownRemark.frontmatter.title}
+      copy={
+        <p
+          dangerouslySetInnerHTML={{
+            __html: data.consultancyText.childMarkdownRemark.html
+          }}
+        />
+      }
+    />
+    <ColourSection
+      color="hsla(330, 93%, 88%, 0.3)"
+      heading={data.auditText.childMarkdownRemark.frontmatter.title}
+      copy={
+        <p
+          dangerouslySetInnerHTML={{
+            __html: data.auditText.childMarkdownRemark.html
+          }}
+        />
+      }
+    />
     <Footer color="#f2309b" />
   </Layout>
 )
 
 export const query = graphql`
+  fragment SocialCopy on File {
+    childMarkdownRemark {
+      frontmatter {
+        title
+      }
+      html
+    }
+  }
   query SocialQuery {
     headerText: file(relativePath: { eq: "markdown/socialheader.md" }) {
-      childMarkdownRemark {
-        frontmatter {
-          title
-        }
-        html
-      }
+      ...SocialCopy
     }
     managementText: file(relativePath: { eq: "markdown/socialmanagement.md" }) {
-      childMarkdownRemark {
-        frontmatter {
-          title
-        }
-        html
-      }
+      ...SocialCopy
+    }
+    consultancyText: file(relativePath: { eq: "markdown/socialconsult.md" }) {
+      ...SocialCopy
+    }
+    auditText: file(relativePath: { eq: "markdown/socialaudit.md" }) {
+      ...SocialCopy
     }
   }
 `
