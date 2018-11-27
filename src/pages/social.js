@@ -75,16 +75,20 @@ export const query = graphql`
     }
   }
   query SocialQuery {
-    headerText: file(relativePath: { eq: "markdown/socialheader.md" }) {
+    headerText: file(relativePath: { eq: "markdown/social/socialheader.md" }) {
       ...SocialCopy
     }
-    managementText: file(relativePath: { eq: "markdown/socialmanagement.md" }) {
+    managementText: file(
+      relativePath: { eq: "markdown/social/socialmanagement.md" }
+    ) {
       ...SocialCopy
     }
-    consultancyText: file(relativePath: { eq: "markdown/socialconsult.md" }) {
+    consultancyText: file(
+      relativePath: { eq: "markdown/social/socialconsult.md" }
+    ) {
       ...SocialCopy
     }
-    auditText: file(relativePath: { eq: "markdown/socialaudit.md" }) {
+    auditText: file(relativePath: { eq: "markdown/social/socialaudit.md" }) {
       ...SocialCopy
     }
   }
