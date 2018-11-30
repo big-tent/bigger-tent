@@ -16,12 +16,12 @@ export default ({ location, data }) => (
       <GraphicHeader
         src={undrawbuild}
         alt="building blocks illustration"
-        headerText="Content creation"
+        headerText={data.headerText.childMarkdownRemark.frontmatter.title}
       />
       <BlurbMain>
         <div
           dangerouslySetInnerHTML={{
-            __html: data.allMarkdownRemark.edges[0].node.html
+            __html: data.headerText.childMarkdownRemark.html
           }}
         />
       </BlurbMain>
@@ -31,11 +31,14 @@ export default ({ location, data }) => (
 
 export const query = graphql`
   query ContentQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          html
+    headerText: file(
+      relativePath: { eq: "markdown/content/contentheader.md" }
+    ) {
+      childMarkdownRemark {
+        frontmatter {
+          title
         }
+        html
       }
     }
   }
