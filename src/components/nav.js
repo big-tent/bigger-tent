@@ -6,12 +6,16 @@ const Nav = styled.nav`
   display: flex;
   margin-bottom: 2rem;
   position: absolute;
+  text-decoration: none;
   top: 1.5rem;
   width: 100%;
   z-index: 1;
   h3,
   h6 {
     color: #fefefe;
+  }
+  a {
+    text-decoration: none;
   }
 `
 
