@@ -23,7 +23,7 @@ export default ({ location, data }) => (
       <BlurbMain>
         <div
           dangerouslySetInnerHTML={{
-            __html: data.allMarkdownRemark.edges[1].node.html
+            __html: data.allMarkdownRemark.edges[4].node.html
           }}
         />
       </BlurbMain>

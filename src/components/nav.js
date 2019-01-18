@@ -58,5 +58,8 @@ export default () => (
     <NavLink to="/content">
       <h6>content</h6>
     </NavLink>
+    <NavLink to="/blog">
+      <h6>blog</h6>
+    </NavLink>
   </Nav>
 )

@@ -46,7 +46,7 @@ export default () => (
     />
     <ContentBox
       icon={lego}
-      boxhead="Cheerful"
+      boxhead="We're happy..."
       boxcopy="We love doing what we do, and we want you to love what we do for you. Our aim is to spread happiness, one website at a time."
     />
   </Container>
