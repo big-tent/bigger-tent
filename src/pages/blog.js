@@ -6,6 +6,7 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 import Header from "../components/Header"
 import Topper from "../components/Topper"
+import ContentHolder from "../components/ContentHolder"
 
 const BlogPageWrapper = styled.div`
   background-color: #f2ba05;
@@ -20,10 +21,6 @@ const BlogPageWrapper = styled.div`
   width: 100vw;
 `
 
-const BlogListWrapper = styled.main`
-  margin: 0 10vw;
-`
-
 const BlogHeader = styled.h3`
   color: #161616;
   margin: 0;
@@ -34,7 +31,7 @@ const BlogPostList = styled.ul`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: 450px;
   grid-gap: 20px;
-  margin-top: 10vh;
+  margin: 0;
   padding: 0;
 `
 
@@ -100,14 +97,14 @@ export default ({ data, location }) => (
   <Layout location={location}>
     <BlogPageWrapper>
       <Topper color="black" />
-      <BlogListWrapper>
+      <ContentHolder>
         <Header headerText="Blog" />
         <BlogPostList>
           {data.allContentfulBlog.edges.map(edge => (
             <BlogPost node={edge.node} />
           ))}
         </BlogPostList>
-      </BlogListWrapper>
+      </ContentHolder>
     </BlogPageWrapper>
   </Layout>
 )

@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 import Nav from "./Nav"
 import Iconlinks from "./IconLinks"
-
 const LayoutWrapper = styled.div``
 
 const Wrapper = styled.section`

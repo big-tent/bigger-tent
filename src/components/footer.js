@@ -4,7 +4,7 @@ import styled from "styled-components"
 const Footer = styled.footer`
   background: ${props => props.color};
   bottom: 0;
-  height: 17vh;
+  height: 15vh;
   left: 0;
   position: relative;
   width: 100%;

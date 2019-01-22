@@ -52,7 +52,7 @@ export default ({ data, location }) => (
           <ImageList>
             {data.allContentfulImage.edges.map(edge => (
               <ImageHolder>
-                <img src={edge.node.image.file.url} />
+                <img src={edge.node.image.file.url} alt={edge.node.caption} />
               </ImageHolder>
             ))}
           </ImageList>

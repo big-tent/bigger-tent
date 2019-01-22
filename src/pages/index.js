@@ -8,10 +8,10 @@ import Topper from "../components/Topper"
 import HeroLogo from "../components/HeroLogo"
 
 const BackgroundImage = styled(Img)`
-  height: 100vh;
+  min-height: 120vh;
   left: 0;
   object-fit: cover;
-  position: fixed;
+  position: absolute;
   width: 100vw;
   top: 0;
   z-index: -1;
@@ -19,7 +19,7 @@ const BackgroundImage = styled(Img)`
 
 export default ({ data, location }) => (
   <Layout location={location}>
-    <Topper color="hsla(0,0%,8.6%,0.7)" />
+    <Topper color="hsla(0,0%,8.6%,0.4)" />
     <BackgroundImage
       fluid={data.backgroundImage.childImageSharp.fluid}
       alt="campfire"

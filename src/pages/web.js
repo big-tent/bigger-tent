@@ -23,7 +23,7 @@ export default ({ location, data }) => (
       <BlurbMain>
         <div
           dangerouslySetInnerHTML={{
-            __html: data.allMarkdownRemark.edges[4].node.html
+            __html: data.file.childMarkdownRemark.html
           }}
         />
       </BlurbMain>
@@ -35,11 +35,9 @@ export default ({ location, data }) => (
 
 export const query = graphql`
   query WebQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          html
-        }
+    file(name: { eq: "webcopy" }) {
+      childMarkdownRemark {
+        html
       }
     }
   }

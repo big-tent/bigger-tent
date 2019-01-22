@@ -3,11 +3,11 @@ import styled from "styled-components"
 
 const ColouredTopper = styled.div`
   background: ${props => props.color};
-  height: 10vh;
-  /* margin-bottom: 8rem; */
-  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 100%);
+  height: 15vh;
+  position: absolute;
   width: 100%;
-  :after {
+  /* :after {
     background: inherit;
     bottom: 0;
     content: "";
@@ -18,7 +18,7 @@ const ColouredTopper = styled.div`
     right: 0;
     transform: skewY(-2.5deg);
     transform-origin: 100%;
-  }
+  } */
 `
 
 export default props => <ColouredTopper color={props.color} />
