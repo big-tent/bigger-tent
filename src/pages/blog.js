@@ -68,6 +68,7 @@ const BlogCopyHolder = styled.div`
 
 const BlogExcerpt = styled.div`
   color: #3c3c3c;
+  font-size: 15px;
 `
 
 const ReadMore = styled.h6`

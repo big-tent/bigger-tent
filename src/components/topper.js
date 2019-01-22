@@ -4,7 +4,7 @@ import styled from "styled-components"
 const ColouredTopper = styled.div`
   background: ${props => props.color};
   height: 10vh;
-  margin-bottom: 8rem;
+  /* margin-bottom: 8rem; */
   position: relative;
   width: 100%;
   :after {

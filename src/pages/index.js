@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
+import Topper from "../components/Topper"
 import HeroLogo from "../components/HeroLogo"
 
 const BackgroundImage = styled(Img)`
@@ -13,10 +14,12 @@ const BackgroundImage = styled(Img)`
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: -1;
 `
 
 export default ({ data, location }) => (
   <Layout location={location}>
+    <Topper color="hsla(0,0%,8.6%,0.7)" />
     <BackgroundImage
       fluid={data.backgroundImage.childImageSharp.fluid}
       alt="campfire"
