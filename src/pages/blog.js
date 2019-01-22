@@ -4,9 +4,9 @@ import Link from "gatsby-link"
 import styled from "styled-components"
 
 import Layout from "../components/Layout"
-import Header from "../components/Header"
 import Topper from "../components/Topper"
 import ContentHolder from "../components/ContentHolder"
+import Footer from "../components/Footer"
 
 const BlogPageWrapper = styled.div`
   background-color: #f2ba05;
@@ -16,9 +16,14 @@ const BlogPageWrapper = styled.div`
     #f2309b 56%,
     #37378c 92%
   );
-  min-height: 100vh;
-  padding-bottom: 20vh;
+  height: 100%;
   width: 100vw;
+`
+
+const BlogPageHeader = styled.h1`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
 `
 
 const BlogHeader = styled.h3`
@@ -96,15 +101,16 @@ const BlogPost = ({ node }) => {
 export default ({ data, location }) => (
   <Layout location={location}>
     <BlogPageWrapper>
-      <Topper color="black" />
+      <Topper color="hsla(0,0%,8.6%,0.7)" />
       <ContentHolder>
-        <Header headerText="Blog" />
+        <BlogPageHeader>Big Tent's Big Blog</BlogPageHeader>
         <BlogPostList>
           {data.allContentfulBlog.edges.map(edge => (
             <BlogPost node={edge.node} />
           ))}
         </BlogPostList>
       </ContentHolder>
+      <Footer color="hsla(0,0%,8.6%,0.7)" />
     </BlogPageWrapper>
   </Layout>
 )

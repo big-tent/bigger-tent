@@ -38,6 +38,7 @@ const LinksContainer = styled.div`
     padding-bottom: 5px;
     text-align: center;
     text-shadow: 2px 2px 2px #000;
+    transition: 1s all;
     @media (min-width: 600px) {
       border-bottom: 10px solid transparent;
       font-size: 2rem;

@@ -28,6 +28,7 @@ const IconLink = styled.div`
   width: calc(100% / 3);
   @media (min-width: 900px) {
     width: 55px;
+    transition: 0.5s ease-out;
     :hover {
       width: 65px;
     }
