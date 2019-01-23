@@ -9,9 +9,15 @@ const Nav = styled.nav`
   top: 1.5rem;
   width: 100%;
   z-index: 1;
-  h3,
+  h3 {
+    color: ${props => props.navcolor};
+  }
   h6 {
     color: #fefefe;
+    :hover {
+      color: ${props => props.navcolor};
+      /* color: hsl(31.6, 92.5%, 52.5%); */
+    }
   }
   a {
     text-decoration: none;
@@ -37,8 +43,8 @@ const NavLink = props => (
   />
 )
 
-export default () => (
-  <Nav>
+export default props => (
+  <Nav navcolor={props.navcolor}>
     <LogoLink to="/">
       <h3>Big Tent</h3>
     </LogoLink>

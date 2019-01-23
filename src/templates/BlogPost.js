@@ -3,12 +3,14 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
-import Header from "../components/Header"
 import Topper from "../components/Topper"
+import Nav from "../components/Nav"
+import Footer from "../components/Footer"
 
 const PostHolder = styled.main`
-  max-width: 90vmin;
-  margin: 10vh 0;
+  width: 60vw;
+  margin: 0 auto 5rem;
+  padding-top: 10vh;
 `
 
 const Image = styled.img`
@@ -45,10 +47,10 @@ export default ({ data }) => {
   const post = data.contentfulBlog
   return (
     <Layout>
-      <Topper color="blue" />
-      <Header headerText="Blog" />
-
+      <Topper color="hsla(0,0%,8.6%,0.7)" />
+      <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
       <Image src={post.image.file.url} alt={post.image.description} />
+      {/* <ContentHolder> */}
       <PostHolder>
         <BlogPostHeadline>{post.title}</BlogPostHeadline>
         <BlogPostDateline>{post.date}</BlogPostDateline>
@@ -58,6 +60,8 @@ export default ({ data }) => {
           }}
         />
       </PostHolder>
+      {/* </ContentHolder> */}
+      <Footer color="hsla(0,0%,8.6%,0.7)" />
     </Layout>
   )
 }

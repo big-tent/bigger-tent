@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import Nav from "./Nav"
+// import Nav from "./Nav"
 import Iconlinks from "./IconLinks"
 const LayoutWrapper = styled.div``
 
@@ -13,7 +13,7 @@ const Wrapper = styled.section`
 
 export default ({ children, location }) => (
   <LayoutWrapper>
-    <Nav location={location} />
+    {/* <Nav location={location} /> */}
     <Iconlinks />
     <Wrapper>{children}</Wrapper>
   </LayoutWrapper>

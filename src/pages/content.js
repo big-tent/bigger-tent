@@ -5,13 +5,16 @@ import undrawbuild from "../svg/undrawbuild.svg"
 
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
+import Nav from "../components/Nav"
 import GraphicHeader from "../components/GraphicHeader"
 import ContentHolder from "../components/ContentHolder"
 import BlurbMain from "../components/BlurbMain"
+import Footer from "../components/Footer"
 
 export default ({ location, data }) => (
   <Layout location={location}>
-    <Topper color="#f2ba05" />
+    <Topper color="hsl(31.6, 92.5%, 52.5%)" />
+    <Nav navcolor="hsl(0, 0%, 8.6%)" />
     <ContentHolder>
       <GraphicHeader
         src={undrawbuild}
@@ -26,6 +29,7 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
+    <Footer color="hsl(31.6, 92.5%, 52.5%)" />
   </Layout>
 )
 

@@ -5,26 +5,17 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 import Header from "../components/Header"
 import Topper from "../components/Topper"
+import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 
 const AboutWrapper = styled.div`
-  background-color: #f2ba05;
-  background-image: linear-gradient(
-    135deg,
-    #f2ba05 15%,
-    #f2309b 56%,
-    #37378c 92%
-  );
+  background: #fefefe;
   height: 100%;
   width: 100vw;
 `
 
 const ContentWrapper = styled.main`
   padding: 20vh 10vw 10vh;
-`
-
-const ImagesWrapper = styled.div`
-  /* margin: 10vh 10vw; */
 `
 
 const ImageList = styled.ul`
@@ -42,21 +33,26 @@ const ImageHolder = styled.li`
   overflow: hidden;
 `
 
+const Image = styled.img`
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+`
+
 export default ({ data, location }) => (
   <Layout location={location}>
     <AboutWrapper>
       <Topper color="hsla(0,0%,8.6%,0.7)" />
+      <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
       <ContentWrapper>
         <Header headerText="About us" />
-        <ImagesWrapper>
-          <ImageList>
-            {data.allContentfulImage.edges.map(edge => (
-              <ImageHolder>
-                <img src={edge.node.image.file.url} alt={edge.node.caption} />
-              </ImageHolder>
-            ))}
-          </ImageList>
-        </ImagesWrapper>
+        <ImageList>
+          {data.allContentfulImage.edges.map(edge => (
+            <ImageHolder>
+              <Image src={edge.node.image.file.url} alt={edge.node.caption} />
+            </ImageHolder>
+          ))}
+        </ImageList>
       </ContentWrapper>
       <Footer color="hsla(0,0%,8.6%,0.7)" />
     </AboutWrapper>

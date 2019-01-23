@@ -5,22 +5,18 @@ import styled from "styled-components"
 
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
+import Nav from "../components/Nav"
 import ContentHolder from "../components/ContentHolder"
 import Footer from "../components/Footer"
 
 const BlogPageWrapper = styled.div`
-  background-color: #f2ba05;
-  background-image: linear-gradient(
-    135deg,
-    #f2ba05 15%,
-    #f2309b 56%,
-    #37378c 92%
-  );
+  background: #fefefe;
   height: 100%;
   width: 100vw;
 `
 
 const BlogPageHeader = styled.h1`
+  color: #161616;
   display: flex;
   justify-content: center;
   margin-bottom: 5vh;
@@ -48,6 +44,9 @@ const BlogPostHolder = styled.li`
   transition: 1s all;
   :hover {
     box-shadow: 10px 10px 16px -8px rgba(60, 60, 60, 1);
+  }
+  a {
+    text-decoration: none;
   }
 `
 
@@ -102,6 +101,7 @@ export default ({ data, location }) => (
   <Layout location={location}>
     <BlogPageWrapper>
       <Topper color="hsla(0,0%,8.6%,0.7)" />
+      <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
       <ContentHolder>
         <BlogPageHeader>Big Tent's Big Blog</BlogPageHeader>
         <BlogPostList>

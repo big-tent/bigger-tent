@@ -5,6 +5,7 @@ import undrawweb from "../svg/undrawweb.svg"
 
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
+import Nav from "../components/Nav"
 import ContentHolder from "../components/ContentHolder"
 import GraphicHeader from "../components/GraphicHeader"
 import BlurbMain from "../components/BlurbMain"
@@ -14,6 +15,7 @@ import Footer from "../components/Footer"
 export default ({ location, data }) => (
   <Layout location={location}>
     <Topper color="#37378c" />
+    <Nav navcolor="hsl(31.6, 100%, 52.5%)" />
     <ContentHolder>
       <GraphicHeader
         src={undrawweb}

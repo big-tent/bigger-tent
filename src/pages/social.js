@@ -5,6 +5,7 @@ import undrawtwitter from "../svg/undrawtwitter.svg"
 
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
+import Nav from "../components/Nav"
 import ContentHolder from "../components/ContentHolder"
 import GraphicHeader from "../components/GraphicHeader"
 import BlurbMain from "../components/BlurbMain"
@@ -14,6 +15,7 @@ import Footer from "../components/Footer"
 export default ({ location, data }) => (
   <Layout location={location}>
     <Topper color="#f2309b" />
+    <Nav navcolor="hsl(0, 0%, 22.6%)" />
     <ContentHolder>
       <GraphicHeader
         src={undrawtwitter}

@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
+import Nav from "../components/Nav"
 import HeroLogo from "../components/HeroLogo"
 
 const BackgroundImage = styled(Img)`
@@ -20,6 +21,7 @@ const BackgroundImage = styled(Img)`
 export default ({ data, location }) => (
   <Layout location={location}>
     <Topper color="hsla(0,0%,8.6%,0.4)" />
+    <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
     <BackgroundImage
       fluid={data.backgroundImage.childImageSharp.fluid}
       alt="campfire"
