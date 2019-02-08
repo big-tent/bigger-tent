@@ -13,8 +13,8 @@ import Footer from "../components/Footer"
 
 export default ({ location, data }) => (
   <Layout location={location}>
-    <Topper color="hsl(31.6, 92.5%, 52.5%)" />
-    <Nav navcolor="hsl(0, 0%, 8.6%)" />
+    <Topper color="hsl(30, 100%, 50%)" />
+    <Nav navcolor="hsla(0,0%,8.6%,0.7)" />
     <ContentHolder>
       <GraphicHeader
         src={undrawbuild}
@@ -29,7 +29,7 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
-    <Footer color="hsl(31.6, 92.5%, 52.5%)" />
+    <Footer color="hsl(30, 100%, 50%)" />
   </Layout>
 )
 

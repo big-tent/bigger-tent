@@ -43,7 +43,8 @@ const BlogPostHolder = styled.li`
   overflow: hidden;
   transition: 1s all;
   :hover {
-    box-shadow: 10px 10px 16px -8px rgba(60, 60, 60, 1);
+    box-shadow: 1px 3px 5px hsla(0, 0%, 0%, 0.7),
+      1px 5px 15px hsla(0, 0%, 0%, 0.3);
   }
   a {
     text-decoration: none;
@@ -101,7 +102,7 @@ export default ({ data, location }) => (
   <Layout location={location}>
     <BlogPageWrapper>
       <Topper color="hsla(0,0%,8.6%,0.7)" />
-      <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
+      <Nav navcolor="hsl(30, 100%, 50%)" />
       <ContentHolder>
         <BlogPageHeader>Big Tent's Big Blog</BlogPageHeader>
         <BlogPostList>

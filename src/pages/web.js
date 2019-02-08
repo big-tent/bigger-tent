@@ -15,7 +15,7 @@ import Footer from "../components/Footer"
 export default ({ location, data }) => (
   <Layout location={location}>
     <Topper color="#37378c" />
-    <Nav navcolor="hsl(31.6, 100%, 52.5%)" />
+    <Nav navcolor="hsl(30, 100%, 50%)" />
     <ContentHolder>
       <GraphicHeader
         src={undrawweb}

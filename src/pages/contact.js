@@ -98,7 +98,7 @@ const Label = styled.label`
 export default ({ location }) => (
   <Layout location={location}>
     <Topper color="hsla(0,0%,8.6%,0.7)" />
-    <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
+    <Nav navcolor="hsl(30, 100%, 50%)" />
     <ContentHolder>
       <Header>Contact us</Header>
       <ContactWrapper>
