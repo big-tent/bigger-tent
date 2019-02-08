@@ -9,6 +9,7 @@ import Nav from "../components/Nav"
 import GraphicHeader from "../components/GraphicHeader"
 import ContentHolder from "../components/ContentHolder"
 import BlurbMain from "../components/BlurbMain"
+import ColourSection from "../components/ColourSection"
 import Footer from "../components/Footer"
 
 export default ({ location, data }) => (
@@ -29,21 +30,63 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
+    <ColourSection
+      color="hsla(30, 100%, 70%, 0.1)"
+      heading={data.animationText.childMarkdownRemark.frontmatter.title}
+      copy={
+        <p
+          dangerouslySetInnerHTML={{
+            __html: data.animationText.childMarkdownRemark.html
+          }}
+        />
+      }
+    />
+    <ColourSection
+      color="hsla(30, 100%, 60%, 0.2)"
+      heading={data.animationText.childMarkdownRemark.frontmatter.title}
+      copy={
+        <p
+          dangerouslySetInnerHTML={{
+            __html: data.animationText.childMarkdownRemark.html
+          }}
+        />
+      }
+    />
+    <ColourSection
+      color="hsla(30, 100%, 50%, 0.3)"
+      heading={data.animationText.childMarkdownRemark.frontmatter.title}
+      copy={
+        <p
+          dangerouslySetInnerHTML={{
+            __html: data.animationText.childMarkdownRemark.html
+          }}
+        />
+      }
+    />
     <Footer color="hsl(30, 100%, 50%)" />
   </Layout>
 )
 
 export const query = graphql`
+  fragment ContentCopy on File {
+    childMarkdownRemark {
+      frontmatter {
+        title
+      }
+      html
+    }
+  }
+
   query ContentQuery {
     headerText: file(
       relativePath: { eq: "markdown/content/contentheader.md" }
     ) {
-      childMarkdownRemark {
-        frontmatter {
-          title
-        }
-        html
-      }
+      ...ContentCopy
+    }
+    animationText: file(
+      relativePath: { eq: "markdown/content/contentanimation.md" }
+    ) {
+      ...ContentCopy
     }
   }
 `
