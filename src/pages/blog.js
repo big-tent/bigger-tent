@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Link from "gatsby-link"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
@@ -51,7 +52,7 @@ const BlogPostHolder = styled.li`
   }
 `
 
-const BlogImage = styled.img`
+const BlogImage = styled(Img)`
   position: relative;
   top: 0;
   left: 0;
@@ -83,7 +84,7 @@ const BlogPost = ({ node }) => {
   return (
     <BlogPostHolder>
       <Link to={node.slug}>
-        <BlogImage src={node.image.file.url} alt={node.image.description} />
+        <BlogImage fluid={node.image.fluid} alt={node.image.description} />
         <BlogCopyHolder>
           <BlogHeader>{node.title}</BlogHeader>
           <BlogExcerpt
@@ -130,8 +131,8 @@ export const pageQuery = graphql`
           }
           image {
             description
-            file {
-              url
+            fluid {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }

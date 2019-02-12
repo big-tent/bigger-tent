@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
@@ -13,7 +14,7 @@ const PostHolder = styled.main`
   padding-top: 10vh;
 `
 
-const Image = styled.img`
+const Image = styled(Img)`
   max-height: 50vh;
   width: 100%;
   object-fit: cover;
@@ -49,8 +50,7 @@ export default ({ data }) => {
     <Layout>
       <Topper color="hsla(0,0%,8.6%,0.7)" />
       <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
-      <Image src={post.image.file.url} alt={post.image.description} />
-      {/* <ContentHolder> */}
+      <Image fluid={post.image.fluid} alt={post.image.description} />
       <PostHolder>
         <BlogPostHeadline>{post.title}</BlogPostHeadline>
         <BlogPostDateline>{post.date}</BlogPostDateline>
@@ -60,7 +60,6 @@ export default ({ data }) => {
           }}
         />
       </PostHolder>
-      {/* </ContentHolder> */}
       <Footer color="hsla(0,0%,8.6%,0.7)" />
     </Layout>
   )
@@ -79,8 +78,8 @@ export const query = graphql`
       }
       image {
         description
-        file {
-          url
+        fluid {
+          ...GatsbyContentfulFluid_withWebp
         }
       }
     }

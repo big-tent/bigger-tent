@@ -5,6 +5,7 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 import Header from "../components/Header"
 import Topper from "../components/Topper"
+import BlurbMain from "../components/BlurbMain"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 
@@ -46,6 +47,15 @@ export default ({ data, location }) => (
       <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
       <ContentWrapper>
         <Header headerText="About us" />
+        <BlurbMain>
+          <div
+            dangerouslySetInnerHTML={{
+              __html:
+                data.allContentfulWebsiteCopy.edges.node.copy
+                  .childMarkdownRemark.html
+            }}
+          />
+        </BlurbMain>
         <ImageList>
           {data.allContentfulImage.edges.map(edge => (
             <ImageHolder>
@@ -59,8 +69,8 @@ export default ({ data, location }) => (
   </Layout>
 )
 
-export const imageQuery = graphql`
-  query imageQuery {
+export const aboutQuery = graphql`
+  query aboutQuery {
     allContentfulImage {
       edges {
         node {
@@ -71,6 +81,17 @@ export const imageQuery = graphql`
           }
           caption
           slug
+        }
+      }
+    }
+    allContentfulWebsiteCopy {
+      edges {
+        node {
+          copy {
+            childMarkdownRemark {
+              html
+            }
+          }
         }
       }
     }
