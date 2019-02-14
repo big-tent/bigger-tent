@@ -20,7 +20,7 @@ const BackgroundImage = styled(Img)`
 
 export default ({ data, location }) => (
   <Layout location={location}>
-    <Topper color="hsla(0,0%,18.6%,0.4)" />
+    <Topper color="hsla(0, 0%, 18.6%, 0.4)" />
     <Nav navcolor="hsl(30, 100%, 50%)" />
     <BackgroundImage
       fluid={data.backgroundImage.childImageSharp.fluid}

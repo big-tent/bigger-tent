@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 import Header from "../components/Header"
@@ -9,13 +10,13 @@ import BlurbMain from "../components/BlurbMain"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 
-const AboutWrapper = styled.div`
+const AboutWrapper = styled.main`
   background: #fefefe;
   height: 100%;
   width: 100vw;
 `
 
-const ContentWrapper = styled.main`
+const ContentWrapper = styled.section`
   padding: 20vh 10vw 10vh;
 `
 
@@ -34,7 +35,7 @@ const ImageHolder = styled.li`
   overflow: hidden;
 `
 
-const Image = styled.img`
+const Image = styled(Img)`
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -50,16 +51,14 @@ export default ({ data, location }) => (
         <BlurbMain>
           <div
             dangerouslySetInnerHTML={{
-              __html:
-                data.allContentfulWebsiteCopy.edges.node.copy
-                  .childMarkdownRemark.html
+              __html: data.contentfulWebsiteCopy.copy.childMarkdownRemark.html
             }}
           />
         </BlurbMain>
         <ImageList>
           {data.allContentfulImage.edges.map(edge => (
             <ImageHolder>
-              <Image src={edge.node.image.file.url} alt={edge.node.caption} />
+              <Image fluid={edge.node.image.fluid} alt={edge.node.caption} />
             </ImageHolder>
           ))}
         </ImageList>
@@ -75,8 +74,8 @@ export const aboutQuery = graphql`
       edges {
         node {
           image {
-            file {
-              url
+            fluid {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
           caption
@@ -84,14 +83,10 @@ export const aboutQuery = graphql`
         }
       }
     }
-    allContentfulWebsiteCopy {
-      edges {
-        node {
-          copy {
-            childMarkdownRemark {
-              html
-            }
-          }
+    contentfulWebsiteCopy {
+      copy {
+        childMarkdownRemark {
+          html
         }
       }
     }

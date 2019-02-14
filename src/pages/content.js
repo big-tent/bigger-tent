@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Video } from "cloudinary-react"
+import styled from "styled-components"
 
 import undrawbuild from "../svg/undrawbuild.svg"
 
@@ -11,6 +13,10 @@ import ContentHolder from "../components/ContentHolder"
 import BlurbMain from "../components/BlurbMain"
 import ColourSection from "../components/ColourSection"
 import Footer from "../components/Footer"
+
+const VideoHolder = styled(Video)`
+  max-width: 300px;
+`
 
 export default ({ location, data }) => (
   <Layout location={location}>
@@ -40,6 +46,11 @@ export default ({ location, data }) => (
           }}
         />
       }
+    />
+    <VideoHolder
+      cloudName="big-tent"
+      publicId="Videos/1f_getting-bedtime-off-to-a-flying-start"
+      controls
     />
     <ColourSection
       color="hsla(30, 100%, 60%, 0.2)"

@@ -12,13 +12,6 @@ const Nav = styled.nav`
   h3 {
     color: ${props => props.navcolor};
   }
-  h6 {
-    color: #fefefe;
-    :hover {
-      color: ${props => props.navcolor};
-      /* color: hsl(31.6, 92.5%, 52.5%); */
-    }
-  }
   a {
     text-decoration: none;
   }
@@ -29,19 +22,16 @@ const LogoLink = styled(Link)`
   margin-right: auto;
 `
 
-const NavLink = props => (
-  <Link
-    {...props}
-    getProps={({ isCurrent }) => {
-      return {
-        style: {
-          display: isCurrent ? "none" : "block",
-          marginRight: "2rem"
-        }
-      }
-    }}
-  />
-)
+const NavLink = styled(Link)`
+  margin-right: 2rem;
+`
+
+const NavItem = styled.h6`
+  color: #fefefe;
+  :hover {
+    color: ${props => props.navcolor};
+  }
+`
 
 export default props => (
   <Nav navcolor={props.navcolor}>
@@ -49,22 +39,22 @@ export default props => (
       <h3>Big Tent</h3>
     </LogoLink>
     <NavLink to="/">
-      <h6>home</h6>
+      <NavItem navcolor={props.navcolor}>home</NavItem>
     </NavLink>
     <NavLink to="/about">
-      <h6>about us</h6>
+      <NavItem navcolor={props.navcolor}>about us</NavItem>
     </NavLink>
     <NavLink to="/web">
-      <h6>web</h6>
+      <NavItem navcolor={props.navcolor}>web</NavItem>
     </NavLink>
     <NavLink to="/social">
-      <h6>social</h6>
+      <NavItem navcolor={props.navcolor}>social</NavItem>
     </NavLink>
     <NavLink to="/content">
-      <h6>content</h6>
+      <NavItem navcolor={props.navcolor}>content</NavItem>
     </NavLink>
-    <NavLink to="/blog">
+    {/* <NavLink to="/blog">
       <h6>blog</h6>
-    </NavLink>
+    </NavLink> */}
   </Nav>
 )
