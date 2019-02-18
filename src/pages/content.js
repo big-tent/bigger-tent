@@ -1,7 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Video } from "cloudinary-react"
-import styled from "styled-components"
 
 import undrawbuild from "../svg/undrawbuild.svg"
 
@@ -11,12 +9,9 @@ import Nav from "../components/Nav"
 import GraphicHeader from "../components/GraphicHeader"
 import ContentHolder from "../components/ContentHolder"
 import BlurbMain from "../components/BlurbMain"
-import ColourSection from "../components/ColourSection"
+import VideoSection from "../components/VideoSection"
+import VideoHolder from "../components/VideoHolder"
 import Footer from "../components/Footer"
-
-const VideoHolder = styled(Video)`
-  max-width: 300px;
-`
 
 export default ({ location, data }) => (
   <Layout location={location}>
@@ -36,7 +31,7 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
-    <ColourSection
+    <VideoSection
       color="hsla(30, 100%, 70%, 0.1)"
       heading={data.animationText.childMarkdownRemark.frontmatter.title}
       copy={
@@ -46,13 +41,11 @@ export default ({ location, data }) => (
           }}
         />
       }
-    />
-    <VideoHolder
-      cloudName="big-tent"
-      publicId="Videos/1f_getting-bedtime-off-to-a-flying-start"
-      controls
-    />
-    <ColourSection
+    >
+      <VideoHolder publicId="Videos/1f_getting-bedtime-off-to-a-flying-start" />
+      <VideoHolder publicId="Videos/alluxi_1.mp4" />
+    </VideoSection>
+    <VideoSection
       color="hsla(30, 100%, 60%, 0.2)"
       heading={data.animationText.childMarkdownRemark.frontmatter.title}
       copy={
@@ -62,8 +55,9 @@ export default ({ location, data }) => (
           }}
         />
       }
+      publicId="Videos/A_bit_about_the_product"
     />
-    <ColourSection
+    <VideoSection
       color="hsla(30, 100%, 50%, 0.3)"
       heading={data.animationText.childMarkdownRemark.frontmatter.title}
       copy={
@@ -73,6 +67,7 @@ export default ({ location, data }) => (
           }}
         />
       }
+      publicId="Videos/wk1_Water"
     />
     <Footer color="hsl(30, 100%, 50%)" />
   </Layout>

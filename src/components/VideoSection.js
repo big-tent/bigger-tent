@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Video } from "cloudinary-react"
 
 const ColouredContainer = styled.section`
   background: ${props => props.color};
@@ -12,7 +13,7 @@ const ColouredContainer = styled.section`
 
 const ContentWrapper = styled.div`
   display: flex;
-  height: 60%;
+  height: 90%;
   width: 70%;
 `
 
@@ -32,23 +33,26 @@ const BottomTriangle = styled.div`
   border-color: ${props => props.color} transparent transparent transparent;
 `
 
-const CopyHolder = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+const VideoHeading = styled.h2`
+  font-size: 2rem;
+  margin: 0;
+  transform: rotate(270deg);
+`
+
+const VideoHolder = styled(Video)`
+  height: 100%;
+  margin-right: 2rem;
 `
 
 export default props => (
-  <div>
+  <>
     <TopTriangle color={props.color} />
     <ColouredContainer color={props.color}>
       <ContentWrapper>
-        <CopyHolder>
-          <h3>{props.heading}</h3>
-          <div>{props.copy}</div>
-        </CopyHolder>
+        <VideoHeading>{props.heading}</VideoHeading>
+        <div>{children}</div>
       </ContentWrapper>
     </ColouredContainer>
     <BottomTriangle color={props.color} />
-  </div>
+  </>
 )
