@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+
+import VideoHolder from "../components/VideoHolder"
 import { Video } from "cloudinary-react"
 
 const ColouredContainer = styled.section`
@@ -35,13 +37,8 @@ const BottomTriangle = styled.div`
 
 const VideoHeading = styled.h2`
   font-size: 2rem;
-  margin: 0;
-  transform: rotate(270deg);
-`
-
-const VideoHolder = styled(Video)`
-  height: 100%;
-  margin-right: 2rem;
+  margin: 0 2rem 0 0;
+  writing-mode: vertical-rl;
 `
 
 export default props => (
@@ -50,7 +47,7 @@ export default props => (
     <ColouredContainer color={props.color}>
       <ContentWrapper>
         <VideoHeading>{props.heading}</VideoHeading>
-        <div>{children}</div>
+        <VideoHolder publicId={props.publicId} />
       </ContentWrapper>
     </ColouredContainer>
     <BottomTriangle color={props.color} />

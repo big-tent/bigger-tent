@@ -10,7 +10,6 @@ import GraphicHeader from "../components/GraphicHeader"
 import ContentHolder from "../components/ContentHolder"
 import BlurbMain from "../components/BlurbMain"
 import VideoSection from "../components/VideoSection"
-import VideoHolder from "../components/VideoHolder"
 import Footer from "../components/Footer"
 
 export default ({ location, data }) => (
@@ -34,20 +33,11 @@ export default ({ location, data }) => (
     <VideoSection
       color="hsla(30, 100%, 70%, 0.1)"
       heading={data.animationText.childMarkdownRemark.frontmatter.title}
-      copy={
-        <p
-          dangerouslySetInnerHTML={{
-            __html: data.animationText.childMarkdownRemark.html
-          }}
-        />
-      }
-    >
-      <VideoHolder publicId="Videos/1f_getting-bedtime-off-to-a-flying-start" />
-      <VideoHolder publicId="Videos/alluxi_1.mp4" />
-    </VideoSection>
+      publicId="Videos/1f_getting-bedtime-off-to-a-flying-start"
+    />
     <VideoSection
       color="hsla(30, 100%, 60%, 0.2)"
-      heading={data.animationText.childMarkdownRemark.frontmatter.title}
+      heading="Audiograms"
       copy={
         <p
           dangerouslySetInnerHTML={{
@@ -59,7 +49,7 @@ export default ({ location, data }) => (
     />
     <VideoSection
       color="hsla(30, 100%, 50%, 0.3)"
-      heading={data.animationText.childMarkdownRemark.frontmatter.title}
+      heading="Videos"
       copy={
         <p
           dangerouslySetInnerHTML={{
