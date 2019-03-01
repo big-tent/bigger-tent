@@ -10,6 +10,7 @@ import GraphicHeader from "../components/GraphicHeader"
 import ContentHolder from "../components/ContentHolder"
 import BlurbMain from "../components/BlurbMain"
 import VideoSection from "../components/VideoSection"
+import VideoHolder from "../components/VideoHolder"
 import Footer from "../components/Footer"
 
 export default ({ location, data }) => (
@@ -30,13 +31,12 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
+    <VideoSection color="hsl(30, 100%, 80%)" heading="Animations">
+      <VideoHolder publicId="Videos/1f_getting-bedtime-off-to-a-flying-start" />
+      <VideoHolder publicId="Videos/alluxi_1" />
+    </VideoSection>
     <VideoSection
-      color="hsla(30, 100%, 70%, 0.1)"
-      heading={data.animationText.childMarkdownRemark.frontmatter.title}
-      publicId="Videos/1f_getting-bedtime-off-to-a-flying-start"
-    />
-    <VideoSection
-      color="hsla(30, 100%, 60%, 0.2)"
+      color="hsl(30, 100%, 80%)"
       heading="Audiograms"
       copy={
         <p
@@ -45,10 +45,13 @@ export default ({ location, data }) => (
           }}
         />
       }
-      publicId="Videos/A_bit_about_the_product"
-    />
+    >
+      <VideoHolder publicId="Videos/A_bit_about_the_product" />
+      <VideoHolder publicId="Videos/Copy_of_Soti_post_TEDx" />
+      <VideoHolder publicId="Videos/March_1_Social_Days_Made_by_Headliner" />
+    </VideoSection>
     <VideoSection
-      color="hsla(30, 100%, 50%, 0.3)"
+      color="hsl(30, 100%, 80%)"
       heading="Videos"
       copy={
         <p
@@ -57,8 +60,10 @@ export default ({ location, data }) => (
           }}
         />
       }
-      publicId="Videos/wk1_Water"
-    />
+    >
+      <VideoHolder publicId="Videos/wk1_Water" />
+      <VideoHolder publicId="Videos/wk2_summer-sports-mason-clinic_1" />
+    </VideoSection>
     <Footer color="hsl(30, 100%, 50%)" />
   </Layout>
 )
