@@ -1,12 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import undrawbuild from "../svg/undrawbuild.svg"
-
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
 import Nav from "../components/Nav"
-import GraphicHeader from "../components/GraphicHeader"
+import BannerPic from "../components/BannerPic"
+import Header from "../components/header"
 import ContentHolder from "../components/ContentHolder"
 import BlurbMain from "../components/BlurbMain"
 import VideoSection from "../components/VideoSection"
@@ -17,10 +16,12 @@ export default ({ location, data }) => (
   <Layout location={location}>
     <Topper color="hsl(30, 100%, 50%)" />
     <Nav navcolor="hsla(0,0%,8.6%,0.7)" />
+    <BannerPic
+      fluid={data.bannerImage.childImageSharp.fluid}
+      alt="Child drawing"
+    />
     <ContentHolder>
-      <GraphicHeader
-        src={undrawbuild}
-        alt="building blocks illustration"
+      <Header
         headerText={data.headerText.childMarkdownRemark.frontmatter.title}
       />
       <BlurbMain>
@@ -88,6 +89,13 @@ export const query = graphql`
       relativePath: { eq: "markdown/content/contentanimation.md" }
     ) {
       ...ContentCopy
+    }
+    bannerImage: file(relativePath: { eq: "rawpixel-463437-unsplash.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
     }
   }
 `

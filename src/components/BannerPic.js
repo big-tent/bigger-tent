@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const BannerImage = styled(Img)`
-  height: 40vh;
+  max-height: 60vh;
   object-fit: cover;
   width: 100vw;
 `

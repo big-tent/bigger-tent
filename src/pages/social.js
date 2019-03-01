@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import undrawtwitter from "../svg/undrawtwitter.svg"
-
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
 import Nav from "../components/Nav"
+import BannerPic from "../components/BannerPic"
+import Header from "../components/header"
 import ContentHolder from "../components/ContentHolder"
-import GraphicHeader from "../components/GraphicHeader"
 import BlurbMain from "../components/BlurbMain"
 import ColourSection from "../components/ColourSection"
 import Footer from "../components/Footer"
@@ -16,10 +15,12 @@ export default ({ location, data }) => (
   <Layout location={location}>
     <Topper color="#f2309b" />
     <Nav navcolor="hsl(0, 0%, 22.6%)" />
+    <BannerPic
+      fluid={data.bannerImage.childImageSharp.fluid}
+      alt="Birds on a branch"
+    />
     <ContentHolder>
-      <GraphicHeader
-        src={undrawtwitter}
-        alt="twitter birds flying out of box"
+      <Header
         headerText={data.headerText.childMarkdownRemark.frontmatter.title}
       />
       <BlurbMain>
@@ -92,6 +93,15 @@ export const query = graphql`
     }
     auditText: file(relativePath: { eq: "markdown/social/socialaudit.md" }) {
       ...SocialCopy
+    }
+    bannerImage: file(
+      relativePath: { eq: "benoit-gauzere-721746-unsplash.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
     }
   }
 `

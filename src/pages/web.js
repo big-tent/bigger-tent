@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import undrawweb from "../svg/undrawweb.svg"
-
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
 import Nav from "../components/Nav"
+import BannerPic from "../components/BannerPic"
+import Header from "../components/header"
 import ContentHolder from "../components/ContentHolder"
-import GraphicHeader from "../components/GraphicHeader"
 import BlurbMain from "../components/BlurbMain"
 import ContentContainer from "../components/ContentContainer"
 import Footer from "../components/Footer"
@@ -16,12 +15,12 @@ export default ({ location, data }) => (
   <Layout location={location}>
     <Topper color="#37378c" />
     <Nav navcolor="hsl(30, 100%, 50%)" />
+    <BannerPic
+      fluid={data.bannerImage.childImageSharp.fluid}
+      alt="Spider's web"
+    />
     <ContentHolder>
-      <GraphicHeader
-        src={undrawweb}
-        alt="web design illustration"
-        headerText="Web design"
-      />
+      <Header headerText="Web design" />
       <BlurbMain>
         <div
           dangerouslySetInnerHTML={{
@@ -40,6 +39,15 @@ export const query = graphql`
     headerText: file(relativePath: { eq: "markdown/web/webcopy.md" }) {
       childMarkdownRemark {
         html
+      }
+    }
+    bannerImage: file(
+      relativePath: { eq: "michael-podger-43123-unsplash.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
       }
     }
   }

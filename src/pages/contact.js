@@ -6,6 +6,8 @@ import Layout from "../components/Layout"
 import Topper from "../components/Topper"
 import Nav from "../components/Nav"
 import ContentHolder from "../components/ContentHolder"
+import Header from "../components/header"
+import BlurbMain from "../components/BlurbMain"
 import Footer from "../components/Footer"
 
 const ContactWrapper = styled.div`
@@ -13,11 +15,6 @@ const ContactWrapper = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
-  justify-content: center;
-`
-const Header = styled.h1`
-  color: #161616;
-  display: flex;
   justify-content: center;
 `
 
@@ -31,7 +28,7 @@ const Form = styled.form`
   margin-bottom: 5vh;
   margin-top: 5vh;
   padding: 30px;
-  min-width: 80%;
+  min-width: 100%;
 `
 
 const Input = styled.input`
@@ -63,7 +60,6 @@ const Submit = styled.input`
   border-style: outset;
   color: #fefefe;
   font: 1.5rem Lato, sans-serif;
-  /* height: 50px; */
   text-shadow: none;
   width: 30vmin;
   :hover {
@@ -77,7 +73,6 @@ const HomeButton = styled.button`
   color: #fefefe;
   display: flex;
   justify-content: center;
-  /* height: 50px; */
   font: 1.5rem Lato, sans-serif;
   padding: 10px;
   width: 30vmin;
@@ -95,12 +90,21 @@ const Label = styled.label`
   }
 `
 
-export default ({ location }) => (
+export default ({ location, data }) => (
   <Layout location={location}>
     <Topper color="hsla(0,0%,8.6%,0.7)" />
     <Nav navcolor="hsl(30, 100%, 50%)" />
     <ContentHolder>
-      <Header>Contact us</Header>
+      <Header
+        headerText={data.headerText.childMarkdownRemark.frontmatter.title}
+      />
+      <BlurbMain>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.headerText.childMarkdownRemark.html
+          }}
+        />
+      </BlurbMain>
       <ContactWrapper>
         <Form name="contact" method="POST" netlify>
           <Label>
@@ -127,3 +131,16 @@ export default ({ location }) => (
     <Footer color="hsla(0,0%,8.6%,0.7)" />
   </Layout>
 )
+
+export const query = graphql`
+  query ContactQuery {
+    headerText: file(relativePath: { eq: "markdown/contactheader.md" }) {
+      childMarkdownRemark {
+        frontmatter {
+          title
+        }
+        html
+      }
+    }
+  }
+`
