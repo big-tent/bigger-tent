@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 import Layout from "../components/Layout"
 import Header from "../components/Header"
 import Topper from "../components/Topper"
+import BannerPic from "../components/BannerPic"
 import BlurbMain from "../components/BlurbMain"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
@@ -17,7 +18,7 @@ const AboutWrapper = styled.main`
 `
 
 const ContentWrapper = styled.section`
-  padding: 20vh 10vw 10vh;
+  padding: 10vh 10vw 10vh;
 `
 
 const ImageList = styled.ul`
@@ -46,6 +47,10 @@ export default ({ data, location }) => (
     <AboutWrapper>
       <Topper color="hsla(0,0%,8.6%,0.7)" />
       <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
+      <BannerPic
+        fluid={data.bannerImage.childImageSharp.fluid}
+        alt="Tents in a misty field"
+      />
       <ContentWrapper>
         <Header headerText="About us" />
         <BlurbMain>
@@ -69,7 +74,7 @@ export default ({ data, location }) => (
 )
 
 export const aboutQuery = graphql`
-  query aboutQuery {
+  query {
     allContentfulImage {
       edges {
         node {
@@ -87,6 +92,15 @@ export const aboutQuery = graphql`
       copy {
         childMarkdownRemark {
           html
+        }
+      }
+    }
+    bannerImage: file(
+      relativePath: { eq: "kilarov-zaneit-773502-unsplash.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

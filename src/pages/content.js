@@ -31,12 +31,12 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
-    <VideoSection color="hsl(30, 100%, 80%)" heading="Animations">
+    <VideoSection color="hsl(30, 100%, 95%)" heading="Animations">
       <VideoHolder publicId="Videos/1f_getting-bedtime-off-to-a-flying-start" />
       <VideoHolder publicId="Videos/alluxi_1" />
     </VideoSection>
     <VideoSection
-      color="hsl(30, 100%, 80%)"
+      color="hsl(30, 100%, 95%)"
       heading="Audiograms"
       copy={
         <p
@@ -51,7 +51,7 @@ export default ({ location, data }) => (
       <VideoHolder publicId="Videos/March_1_Social_Days_Made_by_Headliner" />
     </VideoSection>
     <VideoSection
-      color="hsl(30, 100%, 80%)"
+      color="hsl(30, 100%, 95%)"
       heading="Videos"
       copy={
         <p
