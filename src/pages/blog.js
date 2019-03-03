@@ -81,6 +81,12 @@ const ReadMore = styled.h6`
   margin: 0;
 `
 
+const BurgerHolder = styled.div`
+  @media (min-width: 600px) {
+    display: none;
+  }
+`
+
 const BlogPost = ({ node }) => {
   return (
     <BlogPostHolder>
@@ -105,7 +111,9 @@ export default ({ data, location }) => (
     <BlogPageWrapper>
       <Topper color="hsla(0,0%,8.6%,0.7)" />
       <Nav navcolor="hsl(30, 100%, 50%)" />
-      <Burger />
+      <BurgerHolder>
+        <Burger />
+      </BurgerHolder>
       <ContentHolder>
         <BlogPageHeader>Big Tent's Big Blog</BlogPageHeader>
         <BlogPostList>
