@@ -24,6 +24,9 @@ const LogoLink = styled(Link)`
 
 const NavLink = styled(Link)`
   margin-right: 2rem;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `
 
 const NavItem = styled.h6`

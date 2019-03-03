@@ -45,7 +45,7 @@ const Image = styled(Img)`
 export default ({ data, location }) => (
   <Layout location={location}>
     <AboutWrapper>
-      <Topper color="hsla(0,0%,8.6%,0.7)" />
+      <Topper color="hsla(0, 0%, 8.6%, 0.8)" />
       <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
       <BannerPic
         fluid={data.bannerImage.childImageSharp.fluid}

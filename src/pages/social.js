@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 import Topper from "../components/Topper"
 import Nav from "../components/Nav"
 import BannerPic from "../components/BannerPic"
-import Header from "../components/header"
+import Header from "../components/Header"
 import ContentHolder from "../components/ContentHolder"
 import BlurbMain from "../components/BlurbMain"
 import ColourSection from "../components/ColourSection"
@@ -13,7 +13,7 @@ import Footer from "../components/Footer"
 
 export default ({ location, data }) => (
   <Layout location={location}>
-    <Topper color="#f2309b" />
+    <Topper color="hsl(326.9, 88.2%, 56.9%, 0.8)" />
     <Nav navcolor="hsl(0, 0%, 22.6%)" />
     <BannerPic
       fluid={data.bannerImage.childImageSharp.fluid}

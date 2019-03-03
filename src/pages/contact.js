@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 import Link from "gatsby-link"
 
@@ -6,7 +7,7 @@ import Layout from "../components/Layout"
 import Topper from "../components/Topper"
 import Nav from "../components/Nav"
 import ContentHolder from "../components/ContentHolder"
-import Header from "../components/header"
+import Header from "../components/Header"
 import BlurbMain from "../components/BlurbMain"
 import Footer from "../components/Footer"
 
@@ -16,6 +17,9 @@ const ContactWrapper = styled.div`
   height: 100%;
   width: 100%;
   justify-content: center;
+`
+const TopSpacer = styled.div`
+  margin-top: 15vh;
 `
 
 const Form = styled.form`
@@ -95,6 +99,7 @@ export default ({ location, data }) => (
     <Topper color="hsla(0,0%,8.6%,0.7)" />
     <Nav navcolor="hsl(30, 100%, 50%)" />
     <ContentHolder>
+      <TopSpacer />
       <Header
         headerText={data.headerText.childMarkdownRemark.frontmatter.title}
       />

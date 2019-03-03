@@ -9,6 +9,7 @@ import Topper from "../components/Topper"
 import Nav from "../components/Nav"
 import ContentHolder from "../components/ContentHolder"
 import Footer from "../components/Footer"
+import Burger from "../components/Burger"
 
 const BlogPageWrapper = styled.div`
   background: #fefefe;
@@ -104,6 +105,7 @@ export default ({ data, location }) => (
     <BlogPageWrapper>
       <Topper color="hsla(0,0%,8.6%,0.7)" />
       <Nav navcolor="hsl(30, 100%, 50%)" />
+      <Burger />
       <ContentHolder>
         <BlogPageHeader>Big Tent's Big Blog</BlogPageHeader>
         <BlogPostList>
