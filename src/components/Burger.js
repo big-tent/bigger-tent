@@ -1,5 +1,5 @@
 import React from "react"
-import { slide as Menu } from "react-burger-menu"
+import { bubble as Menu } from "react-burger-menu"
 
 var styles = {
   bmBurgerButton: {
@@ -7,18 +7,19 @@ var styles = {
     width: "25px",
     height: "20px",
     right: "36px",
-    top: "0px"
+    top: "25px"
   },
   bmBurgerBars: {
-    background: "white"
+    background: "#fefefe"
   },
   bmBurgerBarsHover: {
-    background: "blue"
+    background: "white"
   },
   bmCrossButton: {
     height: "24px",
     width: "24px",
-    left: "10%"
+    left: "34px",
+    top: "24px"
   },
   bmCross: {
     background: "hsl(31.6, 92.5%, 52.5%)"
@@ -29,13 +30,14 @@ var styles = {
     width: "100%"
   },
   bmMenu: {
-    background: "hsla(0, 0%, 8.6%, 0.8)",
+    background: "hsl(0, 0%, 25.6%)",
     padding: "3.5rem 2rem 0",
     fontSize: "3rem",
-    fontFamily: "sans-serif"
+    fontFamily: "sans-serif",
+    width: "100vw"
   },
   bmMorphShape: {
-    fill: "#373a47"
+    fill: "hsl(0, 0%, 25.6%)"
   },
   bmItemList: {
     color: "hsl(31.6, 92.5%, 52.5%)",
@@ -45,7 +47,9 @@ var styles = {
   },
   bmItem: {
     color: "inherit",
-    marginBottom: "4rem"
+    margin: "2rem 0",
+    lineHeight: "100%",
+    outline: "none"
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)"
