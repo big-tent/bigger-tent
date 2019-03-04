@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import Burger from "../components/Burger"
+
 const Nav = styled.nav`
   display: flex;
   position: absolute;
@@ -36,6 +38,12 @@ const NavItem = styled.h6`
   }
 `
 
+const BurgerHolder = styled.div`
+  @media (min-width: 600px) {
+    display: none;
+  }
+`
+
 export default props => (
   <Nav navcolor={props.navcolor}>
     <LogoLink to="/">
@@ -59,5 +67,8 @@ export default props => (
     {/* <NavLink to="/blog">
       <h6>blog</h6>
     </NavLink> */}
+    <BurgerHolder>
+      <Burger />
+    </BurgerHolder>
   </Nav>
 )

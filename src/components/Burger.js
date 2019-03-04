@@ -3,11 +3,11 @@ import { slide as Menu } from "react-burger-menu"
 
 var styles = {
   bmBurgerButton: {
-    position: "fixed",
-    width: "36px",
-    height: "30px",
+    position: "absolute",
+    width: "25px",
+    height: "20px",
     right: "36px",
-    top: "25px"
+    top: "0px"
   },
   bmBurgerBars: {
     background: "white"
@@ -21,7 +21,7 @@ var styles = {
     left: "10%"
   },
   bmCross: {
-    background: "white"
+    background: "hsl(31.6, 92.5%, 52.5%)"
   },
   bmMenuWrap: {
     position: "fixed",
@@ -29,19 +29,23 @@ var styles = {
     width: "100%"
   },
   bmMenu: {
-    background: "#373a47",
-    padding: "2.5em 1.5em 0",
-    fontSize: "1.15em"
+    background: "hsla(0, 0%, 8.6%, 0.8)",
+    padding: "3.5rem 2rem 0",
+    fontSize: "3rem",
+    fontFamily: "sans-serif"
   },
   bmMorphShape: {
     fill: "#373a47"
   },
   bmItemList: {
-    color: "#b8b7ad",
-    padding: "0.8em"
+    color: "hsl(31.6, 92.5%, 52.5%)",
+    padding: "0.8em",
+    display: "flex",
+    flexDirection: "column"
   },
   bmItem: {
-    display: "inline-block"
+    color: "inherit",
+    marginBottom: "4rem"
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)"
@@ -54,8 +58,17 @@ export default props => {
       <a className="menu-item" href="/">
         Home
       </a>
-      <a className="menu-item" href="/blog">
-        Blog
+      <a className="menu-item" href="/about">
+        About
+      </a>
+      <a className="menu-item" href="/web">
+        Web
+      </a>
+      <a className="menu-item" href="/social">
+        Social
+      </a>
+      <a className="menu-item" href="/content">
+        Content
       </a>
     </Menu>
   )
