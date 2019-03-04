@@ -1,7 +1,9 @@
 import React from "react"
 import { bubble as Menu } from "react-burger-menu"
+import { Link } from "gatsby"
+import styled from "styled-components"
 
-var styles = {
+const styles = {
   bmBurgerButton: {
     position: "absolute",
     width: "25px",
@@ -43,7 +45,8 @@ var styles = {
     color: "hsl(31.6, 92.5%, 52.5%)",
     padding: "0.8em",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    alignItems: "center"
   },
   bmItem: {
     color: "inherit",
@@ -59,21 +62,21 @@ var styles = {
 export default props => {
   return (
     <Menu right styles={styles}>
-      <a className="menu-item" href="/">
+      <Link to="/" className="menu-item">
         Home
-      </a>
-      <a className="menu-item" href="/about">
+      </Link>
+      <Link to="/about" className="menu-item">
         About
-      </a>
-      <a className="menu-item" href="/web">
+      </Link>
+      <Link to="/web" className="menu-item">
         Web
-      </a>
-      <a className="menu-item" href="/social">
+      </Link>
+      <Link to="/social" className="menu-item">
         Social
-      </a>
-      <a className="menu-item" href="/content">
+      </Link>
+      <Link to="/content" className="menu-item">
         Content
-      </a>
+      </Link>
     </Menu>
   )
 }
