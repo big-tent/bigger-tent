@@ -29,6 +29,8 @@ const IconLink = styled.div`
   @media (min-width: 900px) {
     width: 55px;
     transition: 0.3s ease-out;
+    box-shadow: -1px 3px 5px hsla(0, 0%, 0%, 0.7),
+      -1px 5px 15px hsla(0, 0%, 0%, 0.3);
     :hover {
       width: 65px;
     }

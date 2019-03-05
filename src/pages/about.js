@@ -37,7 +37,7 @@ const ImageList = styled.ul`
   }
 `
 
-const ImageHolder = styled.li`
+const ImageListItem = styled.li`
   background: #fefefe;
   border: 1px solid #3c3c3c;
   list-style-type: none;
@@ -70,9 +70,9 @@ export default ({ data, location }) => (
         </BlurbMain>
         <ImageList>
           {data.allContentfulImage.edges.map(edge => (
-            <ImageHolder>
+            <ImageListItem>
               <Image fluid={edge.node.image.fluid} alt={edge.node.caption} />
-            </ImageHolder>
+            </ImageListItem>
           ))}
         </ImageList>
       </ContentWrapper>
