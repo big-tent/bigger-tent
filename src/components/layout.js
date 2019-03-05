@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import Burger from "./Burger"
-import Iconlinks from "./IconLinks"
+import Iconlinks from "./iconlinks"
 
 const Wrapper = styled.section`
   height: 100%;
