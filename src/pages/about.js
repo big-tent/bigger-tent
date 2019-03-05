@@ -6,10 +6,10 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Header from "../components/header"
 import Topper from "../components/topper"
-import BannerPic from "../components/bannerpic"
 import BlurbMain from "../components/blurbmain"
 import Nav from "../components/nav"
 import Footer from "../components/footer"
+import BannerPic from "../components/bannerpic"
 
 const AboutWrapper = styled.main`
   background: #fefefe;

@@ -4,13 +4,13 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Topper from "../components/topper"
 import Nav from "../components/nav"
-import BannerPic from "../components/bannerpic"
 import Header from "../components/header"
 import ContentHolder from "../components/contentholder"
 import BlurbMain from "../components/blurbmain"
 import VideoSection from "../components/videosection"
 import VideoHolder from "../components/videoholder"
 import Footer from "../components/footer"
+import BannerPic from "../components/bannerpic"
 
 export default ({ location, data }) => (
   <Layout location={location}>
