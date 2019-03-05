@@ -6,9 +6,9 @@ import Topper from "../components/Topper"
 import Nav from "../components/Nav"
 import BannerPic from "../components/BannerPic"
 import Header from "../components/Header"
-import ContentHolder from "../components/ContentHolder"
+import ContentHolder from "../components/contentholder"
 import BlurbMain from "../components/blurbmain"
-import ColourSection from "../components/ColourSection"
+import ColourSection from "../components/coloursection"
 import Footer from "../components/Footer"
 
 export default ({ location, data }) => (

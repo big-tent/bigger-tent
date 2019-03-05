@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
 import Nav from "../components/Nav"
-import ContentHolder from "../components/ContentHolder"
+import ContentHolder from "../components/contentholder"
 import Footer from "../components/Footer"
 
 const BlogPageWrapper = styled.div`
