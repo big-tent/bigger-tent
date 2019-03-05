@@ -8,7 +8,7 @@ import Topper from "../components/Topper"
 import Nav from "../components/Nav"
 import ContentHolder from "../components/ContentHolder"
 import Header from "../components/Header"
-import BlurbMain from "../components/BlurbMain"
+import BlurbMain from "../components/blurbmain"
 import Footer from "../components/Footer"
 
 const ContactWrapper = styled.div`

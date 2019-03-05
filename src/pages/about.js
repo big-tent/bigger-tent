@@ -7,7 +7,7 @@ import Layout from "../components/Layout"
 import Header from "../components/Header"
 import Topper from "../components/Topper"
 import BannerPic from "../components/BannerPic"
-import BlurbMain from "../components/BlurbMain"
+import BlurbMain from "../components/blurbmain"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 

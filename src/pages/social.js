@@ -7,7 +7,7 @@ import Nav from "../components/Nav"
 import BannerPic from "../components/BannerPic"
 import Header from "../components/Header"
 import ContentHolder from "../components/ContentHolder"
-import BlurbMain from "../components/BlurbMain"
+import BlurbMain from "../components/blurbmain"
 import ColourSection from "../components/ColourSection"
 import Footer from "../components/Footer"
 
