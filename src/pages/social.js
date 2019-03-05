@@ -32,7 +32,7 @@ export default ({ location, data }) => (
       </BlurbMain>
     </ContentHolder>
     <ColourSection
-      color="hsla(200, 85%, 87%, 0.3)"
+      color="hsla(330, 93%, 88%, 0.3)"
       heading={data.managementText.childMarkdownRemark.frontmatter.title}
       copy={
         <p
@@ -43,7 +43,7 @@ export default ({ location, data }) => (
       }
     />
     <ColourSection
-      color="hsla(240, 4%, 80%, 0.3)"
+      color="hsla(330, 93%, 88%, 0.3)"
       heading={data.consultancyText.childMarkdownRemark.frontmatter.title}
       copy={
         <p

@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 const ColouredContainer = styled.section`
   background: ${props => props.color};
-  height: 15rem;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -32,10 +31,14 @@ const BottomTriangle = styled.div`
   border-color: ${props => props.color} transparent transparent transparent;
 `
 
-const CopyHolder = styled.div`
+const CopyHolder = styled.article`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+`
+
+const ColourHeading = styled.h3`
+  margin-top: 3rem;
 `
 
 export default props => (
@@ -44,7 +47,7 @@ export default props => (
     <ColouredContainer color={props.color}>
       <ContentWrapper>
         <CopyHolder>
-          <h3>{props.heading}</h3>
+          <ColourHeading>{props.heading}</ColourHeading>
           <div>{props.copy}</div>
         </CopyHolder>
       </ContentWrapper>

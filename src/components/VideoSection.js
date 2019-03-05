@@ -13,6 +13,9 @@ const ColouredContainer = styled.section`
 const ContentWrapper = styled.div`
   display: flex;
   width: 70%;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `
 
 const TopTriangle = styled.div`
@@ -34,11 +37,13 @@ const BottomTriangle = styled.div`
 const VideoHeading = styled.h2`
   font-size: 2rem;
   margin: 0 2rem 0 0;
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
+  @media (min-width: 600px) {
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+  }
 `
 
-const VideoGrid = styled.div`
+const VideoHolder = styled.div`
   align-content: space-around;
   display: flex;
   flex-flow: row wrap;
@@ -53,7 +58,7 @@ export default props => (
     <ColouredContainer color={props.color}>
       <ContentWrapper>
         <VideoHeading>{props.heading}</VideoHeading>
-        <VideoGrid>{props.children}</VideoGrid>
+        <VideoHolder>{props.children}</VideoHolder>
       </ContentWrapper>
     </ColouredContainer>
     <BottomTriangle color={props.color} />

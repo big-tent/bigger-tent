@@ -1,11 +1,10 @@
 import React from "react"
 import { bubble as Menu } from "react-burger-menu"
 import { Link } from "gatsby"
-import styled from "styled-components"
 
 const styles = {
   bmBurgerButton: {
-    position: "absolute",
+    position: "fixed",
     width: "25px",
     height: "20px",
     right: "36px",

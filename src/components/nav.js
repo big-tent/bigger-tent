@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const Nav = styled.nav`
   display: flex;
-  position: absolute;
+  position: fixed;
   text-decoration: none;
   top: 1.5rem;
   width: 100%;

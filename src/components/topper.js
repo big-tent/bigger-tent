@@ -5,7 +5,7 @@ const ColouredTopper = styled.div`
   background: ${props => props.color};
   clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 100%);
   height: 15vh;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 1;
   /* :after {
