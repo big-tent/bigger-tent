@@ -9,7 +9,7 @@ import Topper from "../components/topper"
 import BlurbMain from "../components/blurbmain"
 import Nav from "../components/nav"
 import Footer from "../components/footer"
-import BannerPic from "../components/bannerpic"
+import BannerPic from "../components/bannerimage"
 
 const AboutWrapper = styled.main`
   background: #fefefe;

@@ -10,7 +10,7 @@ import BlurbMain from "../components/blurbmain"
 import VideoSection from "../components/videosection"
 import VideoHolder from "../components/videoholder"
 import Footer from "../components/footer"
-import BannerPic from "../components/bannerpic"
+import BannerPic from "../components/bannerimage"
 
 export default ({ location, data }) => (
   <Layout location={location}>
