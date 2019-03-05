@@ -1,16 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import Topper from "../components/Topper"
-import Nav from "../components/Nav"
-import BannerPic from "../components/BannerPic"
-import Header from "../components/Header"
+import Layout from "../components/layout"
+import Topper from "../components/topper"
+import Nav from "../components/nav"
+import BannerPic from "../components/bannerpic"
+import Header from "../components/header"
 import ContentHolder from "../components/contentholder"
 import BlurbMain from "../components/blurbmain"
-import VideoSection from "../components/VideoSection"
-import VideoHolder from "../components/VideoHolder"
-import Footer from "../components/Footer"
+import VideoSection from "../components/videosection"
+import VideoHolder from "../components/videoholder"
+import Footer from "../components/footer"
 
 export default ({ location, data }) => (
   <Layout location={location}>

@@ -4,8 +4,6 @@ import styled from "styled-components"
 import Burger from "./Burger"
 import Iconlinks from "./IconLinks"
 
-const LayoutWrapper = styled.div``
-
 const Wrapper = styled.section`
   height: 100%;
   position: relative;
@@ -19,11 +17,11 @@ const BurgerHolder = styled.div`
 `
 
 export default ({ children }) => (
-  <LayoutWrapper>
+  <>
     <BurgerHolder>
       <Burger />
     </BurgerHolder>
     <Iconlinks />
     <Wrapper>{children}</Wrapper>
-  </LayoutWrapper>
+  </>
 )

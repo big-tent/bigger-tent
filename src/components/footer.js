@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Footer = styled.footer`
+const Foot = styled.footer`
   background: ${props => props.color};
   bottom: 0;
   height: 15vh;
@@ -32,7 +32,7 @@ const FooterCopy = styled.h6`
 `
 
 export default props => (
-  <Footer color={props.color}>
+  <Foot color={props.color}>
     <FooterCopy>&copy; Big Tent Media</FooterCopy>
-  </Footer>
+  </Foot>
 )

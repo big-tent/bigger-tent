@@ -3,13 +3,13 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import Layout from "../components/Layout"
-import Header from "../components/Header"
-import Topper from "../components/Topper"
-import BannerPic from "../components/BannerPic"
+import Layout from "../components/layout"
+import Header from "../components/header"
+import Topper from "../components/topper"
+import BannerPic from "../components/bannerpic"
 import BlurbMain from "../components/blurbmain"
-import Nav from "../components/Nav"
-import Footer from "../components/Footer"
+import Nav from "../components/nav"
+import Footer from "../components/footer"
 
 const AboutWrapper = styled.main`
   background: #fefefe;

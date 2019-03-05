@@ -3,13 +3,13 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Link from "gatsby-link"
 
-import Layout from "../components/Layout"
-import Topper from "../components/Topper"
-import Nav from "../components/Nav"
+import Layout from "../components/layout"
+import Topper from "../components/topper"
+import Nav from "../components/nav"
 import ContentHolder from "../components/contentholder"
-import Header from "../components/Header"
+import Header from "../components/header"
 import BlurbMain from "../components/blurbmain"
-import Footer from "../components/Footer"
+import Footer from "../components/footer"
 
 const ContactWrapper = styled.div`
   background: #fefefe;

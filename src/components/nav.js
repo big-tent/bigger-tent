@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const Nav = styled.nav`
+const Navbar = styled.nav`
   display: flex;
   position: fixed;
   text-decoration: none;
@@ -37,7 +37,7 @@ const NavItem = styled.h6`
 `
 
 export default props => (
-  <Nav navcolor={props.navcolor}>
+  <Navbar navcolor={props.navcolor}>
     <LogoLink to="/">
       <h3>Big Tent</h3>
     </LogoLink>
@@ -59,5 +59,5 @@ export default props => (
     {/* <NavLink to="/blog">
       <h6>blog</h6>
     </NavLink> */}
-  </Nav>
+  </Navbar>
 )

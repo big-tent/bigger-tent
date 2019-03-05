@@ -7,7 +7,6 @@ const BoxWrapper = styled.section`
   flex-wrap: wrap;
   p {
     color: #141414;
-    /* max-width: 65vw; */
   }
 `
 

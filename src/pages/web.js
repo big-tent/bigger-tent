@@ -1,15 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import Topper from "../components/Topper"
-import Nav from "../components/Nav"
-import BannerPic from "../components/BannerPic"
-import Header from "../components/Header"
+import Layout from "../components/layout"
+import Topper from "../components/topper"
+import Nav from "../components/nav"
+import BannerPic from "../components/bannerpic"
+import Header from "../components/header"
 import ContentHolder from "../components/contentholder"
 import BlurbMain from "../components/blurbmain"
 import ContentContainer from "../components/contentcontainer"
-import Footer from "../components/Footer"
+import Footer from "../components/footer"
 
 export default ({ location, data }) => (
   <Layout location={location}>
