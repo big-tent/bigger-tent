@@ -33,7 +33,7 @@ const ImageList = styled.ul`
   }
   @media (min-width: 900px) {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-auto-rows: 350px;
+    grid-auto-rows: 400px;
   }
 `
 
