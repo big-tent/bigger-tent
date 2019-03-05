@@ -11,6 +11,7 @@ import VideoSection from "../components/videosection"
 import Footer from "../components/footer"
 import BannerPic from "../components/bannerimage"
 import VideoHolder from "../components/videosholder"
+import VideoSection from "../components/vidsection"
 
 export default ({ location, data }) => (
   <Layout location={location}>
