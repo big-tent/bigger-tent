@@ -60,7 +60,7 @@ export default ({ data, location }) => (
         alt="Tents in a misty field"
       />
       <ContentWrapper>
-        <Header headerText="Why Big Tent" />
+        <Header headerText="Come into the Big Tent" />
         <BlurbMain>
           <div
             dangerouslySetInnerHTML={{
