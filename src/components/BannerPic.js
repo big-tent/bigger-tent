@@ -8,7 +8,8 @@ const BannerImage = styled(Img)`
   width: 100vw;
   height: 40vh;
   @media (min-width: 600px) {
-    max-height: 60vh;
+    clip-path: polygon(0 0, 100% 0, 100% 88.8%, 0% 100%);
+    height: 60vh;
   }
 `
 

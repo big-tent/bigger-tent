@@ -19,7 +19,7 @@ const TopTriangle = styled.div`
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 0 10vh 100vw;
+  border-width: 0 0 7vh 100vw;
   border-color: transparent transparent ${props => props.color} transparent;
 `
 
@@ -27,7 +27,7 @@ const BottomTriangle = styled.div`
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 10vh 100vw 0 0;
+  border-width: 7vh 100vw 0 0;
   border-color: ${props => props.color} transparent transparent transparent;
 `
 

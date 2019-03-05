@@ -23,10 +23,18 @@ const ContentWrapper = styled.section`
 
 const ImageList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 400px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
   grid-gap: 10px;
   margin: 0;
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+  }
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: 350px;
+  }
 `
 
 const ImageHolder = styled.li`

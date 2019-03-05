@@ -20,7 +20,7 @@ const ContentWrapper = styled.div`
 
 const TopTriangle = styled.div`
   border-style: solid;
-  border-width: 0 0 10vh 100vw;
+  border-width: 0 0 7vh 100vw;
   border-color: transparent transparent ${props => props.color} transparent;
   height: 0;
   width: 0;
@@ -28,7 +28,7 @@ const TopTriangle = styled.div`
 
 const BottomTriangle = styled.div`
   border-style: solid;
-  border-width: 10vh 100vw 0 0;
+  border-width: 7vh 100vw 0 0;
   border-color: ${props => props.color} transparent transparent transparent;
   height: 0;
   width: 0;
