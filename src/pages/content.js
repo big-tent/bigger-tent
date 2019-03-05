@@ -90,7 +90,7 @@ export const query = graphql`
     ) {
       ...ContentCopy
     }
-    bannerImage: file(relativePath: { eq: "IMG_9218.JPG" }) {
+    bannerImage: file(relativePath: { eq: "IMG_9218 (1).JPG" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG

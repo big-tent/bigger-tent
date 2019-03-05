@@ -32,7 +32,9 @@ export default ({ data, location }) => (
 
 export const query = graphql`
   query {
-    backgroundImage: file(relativePath: { eq: "firepits.jpg" }) {
+    backgroundImage: file(
+      relativePath: { eq: "james-owen-656170-unsplash.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG

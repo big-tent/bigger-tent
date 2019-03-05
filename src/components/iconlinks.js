@@ -32,6 +32,7 @@ const IconLink = styled.div`
     box-shadow: -1px 3px 5px hsla(0, 0%, 0%, 0.7),
       -1px 5px 15px hsla(0, 0%, 0%, 0.3);
     :hover {
+      border-radius: 5px 0 0 5px;
       width: 65px;
     }
   }

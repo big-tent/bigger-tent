@@ -95,7 +95,7 @@ export const query = graphql`
       ...SocialCopy
     }
     bannerImage: file(
-      relativePath: { eq: "benoit-gauzere-721746-unsplash.jpg" }
+      relativePath: { eq: "arjan-stalpers-1367087-unsplash.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 1000) {
