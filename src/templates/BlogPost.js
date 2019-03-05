@@ -3,10 +3,10 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/Layout"
-import Topper from "../components/Topper"
-import Nav from "../components/Nav"
-import Footer from "../components/Footer"
+import Layout from "../components/layout"
+import Topper from "../components/topper"
+import Nav from "../components/nav"
+import Footer from "../components/footer"
 
 const PostHolder = styled.main`
   width: 60vw;
