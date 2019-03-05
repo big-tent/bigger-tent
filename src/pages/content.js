@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/Layout"
 import Topper from "../components/Topper"
@@ -7,10 +8,14 @@ import Nav from "../components/Nav"
 import BannerPic from "../components/BannerPic"
 import Header from "../components/Header"
 import ContentHolder from "../components/ContentHolder"
-import BlurbMain from "../components/BlurbMain"
+// import BlurbMain from "../components/BlurbMain"
 import VideoSection from "../components/VideoSection"
 import VideoHolder from "../components/VideoHolder"
 import Footer from "../components/Footer"
+
+const BlurbMain = styled.div`
+  margin-bottom: 3rem;
+`
 
 export default ({ location, data }) => (
   <Layout location={location}>

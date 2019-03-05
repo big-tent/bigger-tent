@@ -8,8 +8,12 @@ import Topper from "../components/Topper"
 import Nav from "../components/Nav"
 import ContentHolder from "../components/ContentHolder"
 import Header from "../components/Header"
-import BlurbMain from "../components/BlurbMain"
+// import BlurbMain from "../components/BlurbMain"
 import Footer from "../components/Footer"
+
+const BlurbMain = styled.div`
+  margin-bottom: 3rem;
+`
 
 const ContactWrapper = styled.div`
   background: #fefefe;
