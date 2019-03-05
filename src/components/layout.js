@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import Burger from "../components/Burger"
+import Burger from "./Burger"
 import Iconlinks from "./IconLinks"
 
 const LayoutWrapper = styled.div``

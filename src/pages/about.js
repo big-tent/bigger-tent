@@ -7,13 +7,9 @@ import Layout from "../components/Layout"
 import Header from "../components/Header"
 import Topper from "../components/Topper"
 import BannerPic from "../components/BannerPic"
-// import BlurbMain from "../components/BlurbMain"
+import BlurbMain from "../components/BlurbMain"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
-
-const BlurbMain = styled.div`
-  margin-bottom: 3rem;
-`
 
 const AboutWrapper = styled.main`
   background: #fefefe;
