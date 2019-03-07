@@ -31,8 +31,17 @@ const FooterCopy = styled.h6`
   right: 2vw;
 `
 
+const HeartsCopy = styled.h6`
+  bottom: 0;
+  color: #fefefe;
+  font-weight: 100;
+  position: absolute;
+  left: 2vw;
+`
+
 export default props => (
   <Foot color={props.color}>
+    <HeartsCopy>Made with &hearts; in Rochester</HeartsCopy>
     <FooterCopy>&copy; Big Tent Media</FooterCopy>
   </Foot>
 )

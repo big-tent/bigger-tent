@@ -33,6 +33,7 @@ export default ({ location, data }) => (
     </ContentHolder>
     <ColourSection
       color="hsla(330, 93%, 88%, 0.3)"
+      hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
       heading={data.managementText.childMarkdownRemark.frontmatter.title}
       copy={
         <p
@@ -44,6 +45,7 @@ export default ({ location, data }) => (
     />
     <ColourSection
       color="hsla(330, 93%, 88%, 0.3)"
+      hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
       heading={data.consultancyText.childMarkdownRemark.frontmatter.title}
       copy={
         <p
@@ -55,6 +57,7 @@ export default ({ location, data }) => (
     />
     <ColourSection
       color="hsla(330, 93%, 88%, 0.3)"
+      hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
       heading={data.auditText.childMarkdownRemark.frontmatter.title}
       copy={
         <p
@@ -64,7 +67,7 @@ export default ({ location, data }) => (
         />
       }
     />
-    <Footer color="#f2309b" />
+    <Footer color="hsl(326.9, 88.2%, 56.9%, 0.8)" />
   </Layout>
 )
 

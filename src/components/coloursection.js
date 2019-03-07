@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import GetInTouch from "../components/getintouch"
+
 const ColouredContainer = styled.section`
   background: ${props => props.color};
   width: 100vw;
@@ -49,6 +51,7 @@ export default props => (
         <CopyHolder>
           <ColourHeading>{props.heading}</ColourHeading>
           <div>{props.copy}</div>
+          <GetInTouch hovercolor={props.hovercolor} />
         </CopyHolder>
       </ContentWrapper>
     </ColouredContainer>
