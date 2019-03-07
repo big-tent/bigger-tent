@@ -27,10 +27,10 @@ const LinksContainer = styled.div`
   @media (min-width: 600px) {
     flex-direction: row;
   }
-  /* a {
+  a {
     color: #fefefe;
     text-decoration: none;
-  } */
+  }
   h2 {
     color: #fefefe;
     font-size: 2.5rem;
@@ -51,10 +51,10 @@ const LinksContainer = styled.div`
         border-bottom: 10px solid #f2309b;
         text-decoration: none;
         :first-of-type {
-          border-color: #37378c;
+          border-color: hsl(240, 43.6%, 38.2%);
         }
         :last-of-type {
-          border-color: #f2ba05;
+          border-color: hsl(30, 100%, 50%);
         }
       }
     }
@@ -65,15 +65,15 @@ export default () => (
   <HeroLogoWrapper>
     <LogoContainer src={logo} alt="Big Tent logo" />
     <LinksContainer>
-      <Link to="/web">
-        <h2>Web</h2>
-      </Link>
-      <Link to="/social">
-        <h2>Social</h2>
-      </Link>
-      <Link to="/content">
-        <h2>Content</h2>
-      </Link>
+      <h2>
+        <Link to="/web">Web</Link>
+      </h2>
+      <h2>
+        <Link to="/social">Social</Link>
+      </h2>
+      <h2>
+        <Link to="/content">Content</Link>
+      </h2>
     </LinksContainer>
   </HeroLogoWrapper>
 )

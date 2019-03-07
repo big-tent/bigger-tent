@@ -30,7 +30,7 @@ export default ({ location, data }) => (
       </BlurbMain>
       <ContentContainer />
     </ContentHolder>
-    <Footer color="#37378c" />
+    <Footer color="hsl(240, 43.6%, 38.2%)" />
   </Layout>
 )
 
