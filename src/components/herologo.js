@@ -12,6 +12,7 @@ const HeroLogoWrapper = styled.h1`
   right: 0;
   margin: auto;
   width: 75vmin;
+  z-index: 2;
 `
 
 const LogoContainer = styled.img`
@@ -19,22 +20,22 @@ const LogoContainer = styled.img`
 `
 
 const LinksContainer = styled.div`
-  color: #fff;
+  color: #fefefe;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   @media (min-width: 600px) {
     flex-direction: row;
   }
-  a {
-    color: #fff;
+  /* a {
+    color: #fefefe;
     text-decoration: none;
-  }
+  } */
   h2 {
-    color: white;
+    color: #fefefe;
     font-size: 2.5rem;
     font-weight: 100;
-    margin: 5px 0 0 0;
+    margin: 20px 0 0 0;
     padding-bottom: 5px;
     text-align: center;
     text-shadow: 2px 2px 2px #000;
@@ -42,9 +43,13 @@ const LinksContainer = styled.div`
     @media (min-width: 600px) {
       border-bottom: 10px solid transparent;
       font-size: 2rem;
-      :hover {
+      :hover,
+      :focus,
+      :active,
+      :link {
         cursor: pointer;
         border-bottom: 10px solid #f2309b;
+        text-decoration: none;
         :first-of-type {
           border-color: #37378c;
         }
@@ -60,15 +65,15 @@ export default () => (
   <HeroLogoWrapper>
     <LogoContainer src={logo} alt="Big Tent logo" />
     <LinksContainer>
-      <h2>
-        <Link to="/web">Web</Link>
-      </h2>
-      <h2>
-        <Link to="/social">Social</Link>
-      </h2>
-      <h2>
-        <Link to="/content">Content</Link>
-      </h2>
+      <Link to="/web">
+        <h2>Web</h2>
+      </Link>
+      <Link to="/social">
+        <h2>Social</h2>
+      </Link>
+      <Link to="/content">
+        <h2>Content</h2>
+      </Link>
     </LinksContainer>
   </HeroLogoWrapper>
 )

@@ -7,7 +7,6 @@ import { IconMail, IconTwitter, IconPhone } from "../utilities/icons.js"
 const IconsHolder = styled.div`
   align-items: flex-end;
   display: flex;
-  height: 100%;
   justify-content: center;
   position: fixed;
   right: 0;
@@ -16,6 +15,7 @@ const IconsHolder = styled.div`
   z-index: 1;
   @media (min-width: 900px) {
     flex-direction: column;
+    height: 100%;
     width: auto;
   }
 `

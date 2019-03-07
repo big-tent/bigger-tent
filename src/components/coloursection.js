@@ -44,7 +44,7 @@ const ColourHeading = styled.h3`
 `
 
 export default props => (
-  <div>
+  <>
     <TopTriangle color={props.color} />
     <ColouredContainer color={props.color}>
       <ContentWrapper>
@@ -56,5 +56,5 @@ export default props => (
       </ContentWrapper>
     </ColouredContainer>
     <BottomTriangle color={props.color} />
-  </div>
+  </>
 )
