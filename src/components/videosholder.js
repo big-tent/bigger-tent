@@ -16,6 +16,12 @@ const VideoBox = styled(Video)`
 
 export default props => (
   <>
-    <VideoBox cloudName="big-tent" publicId={props.publicId} controls />
+    <VideoBox
+      cloudName="big-tent"
+      publicId={props.publicId}
+      controls
+      autobuffer="true"
+      playsInline
+    />
   </>
 )
