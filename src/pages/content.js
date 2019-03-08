@@ -33,7 +33,7 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
-    <Fade top>
+    <Fade top delay={500}>
       <VideoSection color="hsl(30, 100%, 95%)" heading="Animations">
         <VideoHolder publicId="Videos/1f_getting-bedtime-off-to-a-flying-start" />
         <VideoHolder publicId="Videos/alluxi_1" />

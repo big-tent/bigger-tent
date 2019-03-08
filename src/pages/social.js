@@ -32,7 +32,7 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
-    <Fade top>
+    <Fade top fraction={0.5}>
       <ColourSection
         color="hsla(330, 93%, 88%, 0.3)"
         hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
