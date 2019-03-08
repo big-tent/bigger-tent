@@ -32,7 +32,7 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
-    <Fade right>
+    <Fade top>
       <ColourSection
         color="hsla(330, 93%, 88%, 0.3)"
         hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
@@ -45,8 +45,6 @@ export default ({ location, data }) => (
           />
         }
       />
-    </Fade>
-    <Fade right>
       <ColourSection
         color="hsla(330, 93%, 88%, 0.3)"
         hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
@@ -59,8 +57,6 @@ export default ({ location, data }) => (
           />
         }
       />
-    </Fade>
-    <Fade right>
       <ColourSection
         color="hsla(330, 93%, 88%, 0.3)"
         hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"

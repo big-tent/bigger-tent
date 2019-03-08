@@ -33,13 +33,11 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
-    <Fade right>
+    <Fade top>
       <VideoSection color="hsl(30, 100%, 95%)" heading="Animations">
         <VideoHolder publicId="Videos/1f_getting-bedtime-off-to-a-flying-start" />
         <VideoHolder publicId="Videos/alluxi_1" />
       </VideoSection>
-    </Fade>
-    <Fade right>
       <VideoSection
         color="hsl(30, 100%, 95%)"
         heading="Audiograms"
@@ -55,8 +53,6 @@ export default ({ location, data }) => (
         <VideoHolder publicId="Videos/Copy_of_Soti_post_TEDx" />
         <VideoHolder publicId="Videos/March_1_Social_Days_Made_by_Headliner" />
       </VideoSection>
-    </Fade>
-    <Fade right>
       <VideoSection
         color="hsl(30, 100%, 95%)"
         heading="Videos"
