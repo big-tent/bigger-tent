@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Fade from "react-reveal/Fade"
 
 import Layout from "../components/layout"
 import Topper from "../components/topper"
@@ -31,42 +32,48 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
-    <ColourSection
-      color="hsla(330, 93%, 88%, 0.3)"
-      hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
-      heading={data.managementText.childMarkdownRemark.frontmatter.title}
-      copy={
-        <p
-          dangerouslySetInnerHTML={{
-            __html: data.managementText.childMarkdownRemark.html
-          }}
-        />
-      }
-    />
-    <ColourSection
-      color="hsla(330, 93%, 88%, 0.3)"
-      hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
-      heading={data.consultancyText.childMarkdownRemark.frontmatter.title}
-      copy={
-        <p
-          dangerouslySetInnerHTML={{
-            __html: data.consultancyText.childMarkdownRemark.html
-          }}
-        />
-      }
-    />
-    <ColourSection
-      color="hsla(330, 93%, 88%, 0.3)"
-      hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
-      heading={data.auditText.childMarkdownRemark.frontmatter.title}
-      copy={
-        <p
-          dangerouslySetInnerHTML={{
-            __html: data.auditText.childMarkdownRemark.html
-          }}
-        />
-      }
-    />
+    <Fade right>
+      <ColourSection
+        color="hsla(330, 93%, 88%, 0.3)"
+        hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
+        heading={data.managementText.childMarkdownRemark.frontmatter.title}
+        copy={
+          <p
+            dangerouslySetInnerHTML={{
+              __html: data.managementText.childMarkdownRemark.html
+            }}
+          />
+        }
+      />
+    </Fade>
+    <Fade right>
+      <ColourSection
+        color="hsla(330, 93%, 88%, 0.3)"
+        hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
+        heading={data.consultancyText.childMarkdownRemark.frontmatter.title}
+        copy={
+          <p
+            dangerouslySetInnerHTML={{
+              __html: data.consultancyText.childMarkdownRemark.html
+            }}
+          />
+        }
+      />
+    </Fade>
+    <Fade right>
+      <ColourSection
+        color="hsla(330, 93%, 88%, 0.3)"
+        hovercolor="hsl(326.9, 88.2%, 56.9%, 0.8)"
+        heading={data.auditText.childMarkdownRemark.frontmatter.title}
+        copy={
+          <p
+            dangerouslySetInnerHTML={{
+              __html: data.auditText.childMarkdownRemark.html
+            }}
+          />
+        }
+      />
+    </Fade>
     <Footer color="hsl(326.9, 88.2%, 56.9%, 0.8)" />
   </Layout>
 )

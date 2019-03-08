@@ -99,6 +99,18 @@ const BlogPost = ({ node }) => {
   )
 }
 
+const ScrollTester = styled.div`
+  background: firebrick;
+  height: 500px;
+  margin-top: 500px;
+  :first-of-type {
+    background: forestgreen;
+  }
+  :last-of-type {
+    background: indigo;
+  }
+`
+
 export default ({ data, location }) => (
   <Layout location={location}>
     <BlogPageWrapper>
@@ -111,6 +123,9 @@ export default ({ data, location }) => (
             <BlogPost node={edge.node} />
           ))}
         </BlogPostList>
+        <ScrollTester />
+        <ScrollTester />
+        <ScrollTester />
       </ContentHolder>
       <Footer color="hsla(0,0%,8.6%,0.7)" />
     </BlogPageWrapper>
