@@ -9,7 +9,7 @@ import Nav from "../components/nav"
 import HeroLogo from "../components/herologo"
 
 const BackgroundImage = styled(Img)`
-  min-height: 120vh;
+  min-height: 100vh;
   left: 0;
   object-fit: cover;
   position: absolute;
