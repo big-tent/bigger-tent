@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Fade from "react-reveal/Fade"
 
 import Layout from "../components/layout"
 import Topper from "../components/topper"
@@ -33,41 +32,39 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
     </ContentHolder>
-    <Fade top delay={500}>
-      <VideoSection color="hsl(30, 100%, 95%)" heading="Animations">
-        <VideoHolder publicId="Videos/1f_getting-bedtime-off-to-a-flying-start" />
-        <VideoHolder publicId="Videos/alluxi_1" />
-      </VideoSection>
-      <VideoSection
-        color="hsl(30, 100%, 95%)"
-        heading="Audiograms"
-        copy={
-          <p
-            dangerouslySetInnerHTML={{
-              __html: data.animationText.childMarkdownRemark.html
-            }}
-          />
-        }
-      >
-        <VideoHolder publicId="Videos/A_bit_about_the_product" />
-        <VideoHolder publicId="Videos/Copy_of_Soti_post_TEDx" />
-        <VideoHolder publicId="Videos/March_1_Social_Days_Made_by_Headliner" />
-      </VideoSection>
-      <VideoSection
-        color="hsl(30, 100%, 95%)"
-        heading="Videos"
-        copy={
-          <p
-            dangerouslySetInnerHTML={{
-              __html: data.animationText.childMarkdownRemark.html
-            }}
-          />
-        }
-      >
-        <VideoHolder publicId="Videos/wk1_Water" />
-        <VideoHolder publicId="Videos/wk2_summer-sports-mason-clinic_1" />
-      </VideoSection>
-    </Fade>
+    <VideoSection color="hsl(30, 100%, 95%)" heading="Animations">
+      <VideoHolder publicId="Videos/1f_getting-bedtime-off-to-a-flying-start" />
+      <VideoHolder publicId="Videos/alluxi_1" />
+    </VideoSection>
+    <VideoSection
+      color="hsl(30, 100%, 95%)"
+      heading="Audiograms"
+      copy={
+        <p
+          dangerouslySetInnerHTML={{
+            __html: data.animationText.childMarkdownRemark.html
+          }}
+        />
+      }
+    >
+      <VideoHolder publicId="Videos/A_bit_about_the_product" />
+      <VideoHolder publicId="Videos/Copy_of_Soti_post_TEDx" />
+      <VideoHolder publicId="Videos/March_1_Social_Days_Made_by_Headliner" />
+    </VideoSection>
+    <VideoSection
+      color="hsl(30, 100%, 95%)"
+      heading="Videos"
+      copy={
+        <p
+          dangerouslySetInnerHTML={{
+            __html: data.animationText.childMarkdownRemark.html
+          }}
+        />
+      }
+    >
+      <VideoHolder publicId="Videos/wk1_Water" />
+      <VideoHolder publicId="Videos/wk2_summer-sports-mason-clinic_1" />
+    </VideoSection>
     <Footer color="hsl(30, 100%, 50%)" />
   </Layout>
 )
