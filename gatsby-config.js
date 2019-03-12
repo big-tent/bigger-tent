@@ -42,6 +42,20 @@ module.exports = {
       }
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Big Tent`,
+        short_name: `Big Tent`,
+        start_url: `/`,
+        background_color: `#161616`,
+        theme_color: `#161616`,
+        display: `standalone`,
+        icon: `src/images/big-tent-icon.png`,
+        include_favicon: true
+      }
+    },
+    `gatsby-plugin-offline`,
     `react-icons-kit`
   ]
 }
