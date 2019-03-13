@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 import Topper from "../components/topper"
@@ -14,6 +15,10 @@ import VideoSection from "../components/vidsection"
 
 export default ({ location, data }) => (
   <Layout location={location}>
+    <SEO
+      title="Content creation"
+      keywords={[`content`, `creation`, `animation`, `audiograms`, `videos`]}
+    />
     <Topper color="hsla(30, 100%, 50%, 0.9)" />
     <Nav navcolor="hsla(0,0%,8.6%,0.7)" />
     <BannerPic

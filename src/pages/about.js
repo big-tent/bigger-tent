@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 import Header from "../components/header"
@@ -52,6 +53,7 @@ const Image = styled(Img)`
 
 export default ({ data, location }) => (
   <Layout location={location}>
+    <SEO title="About" keywords={[`About`]} />
     <AboutWrapper>
       <Topper color="hsla(0, 0%, 8.6%, 0.8)" />
       <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />

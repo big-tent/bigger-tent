@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Link from "gatsby-link"
+import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 import Topper from "../components/topper"
@@ -96,6 +97,7 @@ const Label = styled.label`
 
 export default ({ location, data }) => (
   <Layout location={location}>
+    <SEO title="Contact" keywords={[`contact`]} />
     <Topper color="hsla(0,0%,8.6%,0.7)" />
     <Nav navcolor="hsl(30, 100%, 50%)" />
     <ContentHolder>

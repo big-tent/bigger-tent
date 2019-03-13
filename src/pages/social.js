@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Fade from "react-reveal/Fade"
+import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 import Topper from "../components/topper"
@@ -14,6 +15,7 @@ import Footer from "../components/footer"
 
 export default ({ location, data }) => (
   <Layout location={location}>
+    <SEO title="Social media" keywords={[`social`, `media`, `management`]} />
     <Topper color="hsl(326.9, 88.2%, 56.9%, 0.8)" />
     <Nav navcolor="hsl(0, 0%, 22.6%)" />
     <BannerPic

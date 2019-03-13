@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 import Topper from "../components/topper"
@@ -13,6 +14,10 @@ import Footer from "../components/footer"
 
 export default ({ location, data }) => (
   <Layout location={location}>
+    <SEO
+      title="Web design"
+      keywords={[`web design`, `development`, `websites`, `gatsby`]}
+    />
     <Topper color="hsla(240, 43.6%, 38.2%, 0.9)" />
     <Nav navcolor="hsl(30, 100%, 50%)" />
     <BannerPic
