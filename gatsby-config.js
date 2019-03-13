@@ -8,7 +8,9 @@ const { spaceId, accessToken } = process.env
 
 module.exports = {
   siteMetadata: {
-    title: `Big Tent`
+    title: `Big Tent`,
+    description: `Big Tent Media web design, social media management and content creation`,
+    author: `Big Tent`
   },
   plugins: [
     {
@@ -28,6 +30,8 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -41,7 +45,6 @@ module.exports = {
         pathToConfigModule: `src/utilities/typography.js`
       }
     },
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
