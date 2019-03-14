@@ -21,11 +21,21 @@ const FooterCopy = styled.h6`
 
 const HeartsCopy = styled(FooterCopy)`
   left: 2vw;
+  a {
+    text-decoration: none;
+    color: inherit;
+    :hover {
+      color: #fefefe;
+    }
+  }
 `
 
 export default props => (
   <Foot color={props.color}>
-    <HeartsCopy>Made with &hearts; in Rochester</HeartsCopy>
+    <HeartsCopy>
+      Made with &hearts; in{" "}
+      <a href="https://www.instagram.com/rochesterdaily/?hl=en">Rochester</a>
+    </HeartsCopy>
     <FooterCopy>&copy; Big Tent Media</FooterCopy>
   </Foot>
 )

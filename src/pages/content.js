@@ -17,7 +17,15 @@ export default ({ location, data }) => (
   <Layout location={location}>
     <SEO
       title="Content creation"
-      keywords={[`content`, `creation`, `animation`, `audiograms`, `videos`]}
+      keywords={[
+        `content`,
+        `creation`,
+        `animation`,
+        `audiograms`,
+        `videos`,
+        `website content`,
+        `content marketing`
+      ]}
     />
     <Topper color="hsla(30, 100%, 50%, 0.9)" />
     <Nav navcolor="hsla(0,0%,8.6%,0.7)" />
