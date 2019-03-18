@@ -54,7 +54,7 @@ module.exports = {
         background_color: `#161616`,
         theme_color: `#161616`,
         display: `standalone`,
-        icon: `src/images/bigtentgreycircle.png`,
+        icon: `src/images/big-tent-icon.png`,
         include_favicon: true
       }
     },
