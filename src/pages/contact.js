@@ -113,7 +113,7 @@ export default ({ location, data }) => (
         />
       </BlurbMain>
       <ContactWrapper>
-        <Form name="contact" method="POST" netlify>
+        <Form action="https://formspree.io/info@bigtent.media" method="POST">
           <Label>
             <h6>Name</h6>
             <Input type="text" name="name" placeholder="Your name" />
