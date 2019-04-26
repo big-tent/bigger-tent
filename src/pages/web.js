@@ -25,8 +25,8 @@ export default ({ location, data }) => (
       alt="Spider's web"
     />
     <ContentHolder>
-      <Header headerText="Web design" />
       <BlurbMain>
+        <Header headerText="Web design" />
         <div
           dangerouslySetInnerHTML={{
             __html: data.headerText.childMarkdownRemark.html

@@ -23,10 +23,10 @@ export default ({ location, data }) => (
       alt="Birds on a branch"
     />
     <ContentHolder>
-      <Header
-        headerText={data.headerText.childMarkdownRemark.frontmatter.title}
-      />
       <BlurbMain>
+        <Header
+          headerText={data.headerText.childMarkdownRemark.frontmatter.title}
+        />
         <div
           dangerouslySetInnerHTML={{
             __html: data.headerText.childMarkdownRemark.html

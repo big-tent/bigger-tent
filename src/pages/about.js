@@ -62,8 +62,8 @@ export default ({ data, location }) => (
         alt="Tents in a misty field"
       />
       <ContentWrapper>
-        <Header headerText="Come into the Big Tent" />
         <BlurbMain>
+          <Header headerText="Come into the Big Tent" />
           <div
             dangerouslySetInnerHTML={{
               __html: data.contentfulWebsiteCopy.copy.childMarkdownRemark.html

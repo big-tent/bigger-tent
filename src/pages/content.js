@@ -34,10 +34,10 @@ export default ({ location, data }) => (
       alt="Child drawing"
     />
     <ContentHolder>
-      <Header
-        headerText={data.headerText.childMarkdownRemark.frontmatter.title}
-      />
       <BlurbMain>
+        <Header
+          headerText={data.headerText.childMarkdownRemark.frontmatter.title}
+        />
         <div
           dangerouslySetInnerHTML={{
             __html: data.headerText.childMarkdownRemark.html
