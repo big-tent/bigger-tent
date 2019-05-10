@@ -37,6 +37,8 @@ const CopyHolder = styled.article`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  margin: 0 auto;
+  max-width: 800px;
 `
 
 const ColourHeading = styled.h3`

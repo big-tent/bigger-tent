@@ -1,17 +1,25 @@
 import React from "react"
+import styled from "styled-components"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
 
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Topper from "../components/topper"
 import Nav from "../components/nav"
 import Header from "../components/header"
+import BannerPic from "../components/bannerimage"
 import ContentHolder from "../components/contentholder"
 import BlurbMain from "../components/blurbmain"
+import CardGrid from "../components/cardgrid"
+import GridCard from "../components/gridcard"
 import Footer from "../components/footer"
-import BannerPic from "../components/bannerimage"
-import VideoHolder from "../components/videosholder"
-import VideoSection from "../components/vidsection"
+
+const CardTopper = styled.div`
+  background: ${props => props.color};
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  height: 100px;
+  width: 110%;
+`
 
 export default ({ location, data }) => (
   <Layout location={location}>
@@ -34,40 +42,20 @@ export default ({ location, data }) => (
           }}
         />
       </BlurbMain>
+      <CardGrid>
+        <GridCard>
+          <CardTopper color="red">
+            <h2>Hello</h2>
+          </CardTopper>
+        </GridCard>
+        <GridCard>
+          <CardTopper color="blue" />
+        </GridCard>
+        <GridCard>
+          <CardTopper color="yellow" />
+        </GridCard>
+      </CardGrid>
     </ContentHolder>
-    <VideoSection color="hsl(30, 100%, 95%)" heading="Animations">
-      <VideoHolder publicId="Videos/1f_getting-bedtime-off-to-a-flying-start" />
-      <VideoHolder publicId="Videos/alluxi_1" />
-    </VideoSection>
-    <VideoSection
-      color="hsl(30, 100%, 95%)"
-      heading="Audiograms"
-      copy={
-        <p
-          dangerouslySetInnerHTML={{
-            __html: data.animationText.childMarkdownRemark.html
-          }}
-        />
-      }
-    >
-      <VideoHolder publicId="Videos/A_bit_about_the_product" />
-      <VideoHolder publicId="Videos/Copy_of_Soti_post_TEDx" />
-      <VideoHolder publicId="Videos/March_1_Social_Days_Made_by_Headliner" />
-    </VideoSection>
-    <VideoSection
-      color="hsl(30, 100%, 95%)"
-      heading="Videos"
-      copy={
-        <p
-          dangerouslySetInnerHTML={{
-            __html: data.animationText.childMarkdownRemark.html
-          }}
-        />
-      }
-    >
-      <VideoHolder publicId="Videos/wk1_Water" />
-      <VideoHolder publicId="Videos/wk2_summer-sports-mason-clinic_1" />
-    </VideoSection>
     <Footer color="hsl(30, 100%, 50%)" />
   </Layout>
 )

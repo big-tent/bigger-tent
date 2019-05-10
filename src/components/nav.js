@@ -56,8 +56,11 @@ export default props => (
     <NavLink to="/content">
       <NavItem navcolor={props.navcolor}>content</NavItem>
     </NavLink>
-    {/* <NavLink to="/blog">
-      <h6>blog</h6>
-    </NavLink> */}
+    <NavLink to="/audio">
+      <NavItem navcolor={props.navcolor}>audio</NavItem>
+    </NavLink>
+    <NavLink to="/blog">
+      <NavItem navcolor={props.navcolor}>blog</NavItem>
+    </NavLink>
   </Navbar>
 )

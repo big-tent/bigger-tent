@@ -8,6 +8,8 @@ import Layout from "../components/layout"
 import Topper from "../components/topper"
 import Nav from "../components/nav"
 import ContentHolder from "../components/contentholder"
+import CardGrid from "../components/cardgrid"
+import GridCard from "../components/gridcard"
 import Footer from "../components/footer"
 
 const BlogPageWrapper = styled.div`
@@ -26,30 +28,6 @@ const BlogPageHeader = styled.h1`
 const BlogHeader = styled.h3`
   color: #161616;
   margin: 0;
-`
-
-const BlogPostList = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 450px;
-  grid-gap: 20px;
-  margin: 0;
-  padding: 0;
-`
-
-const BlogPostHolder = styled.li`
-  background: #fefefe;
-  border: 1px solid #3c3c3c;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: 1s all;
-  :hover {
-    box-shadow: 1px 3px 5px hsla(0, 0%, 0%, 0.7),
-      1px 5px 15px hsla(0, 0%, 0%, 0.3);
-  }
-  a {
-    text-decoration: none;
-  }
 `
 
 const BlogImage = styled(Img)`
@@ -82,7 +60,7 @@ const ReadMore = styled.h6`
 
 const BlogPost = ({ node }) => {
   return (
-    <BlogPostHolder>
+    <GridCard>
       <Link to={node.slug}>
         <BlogImage fluid={node.image.fluid} alt={node.image.description} />
         <BlogCopyHolder>
@@ -95,7 +73,7 @@ const BlogPost = ({ node }) => {
           <ReadMore>Click to read more</ReadMore>
         </BlogCopyHolder>
       </Link>
-    </BlogPostHolder>
+    </GridCard>
   )
 }
 
@@ -114,11 +92,11 @@ export default ({ data, location }) => (
       <Nav navcolor="hsl(30, 100%, 50%)" />
       <ContentHolder>
         <BlogPageHeader>Big Tent's Big Blog</BlogPageHeader>
-        <BlogPostList>
+        <CardGrid>
           {data.allContentfulBlog.edges.map(edge => (
             <BlogPost node={edge.node} />
           ))}
-        </BlogPostList>
+        </CardGrid>
 
         <ul>
           {data.allContentfulBlog.edges.map(edge => (
