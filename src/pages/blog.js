@@ -77,14 +77,6 @@ const BlogPost = ({ node }) => {
   )
 }
 
-const CarouselImage = ({ node }) => {
-  return (
-    <li>
-      <Img fluid={node.image.fluid} />
-    </li>
-  )
-}
-
 export default ({ data, location }) => (
   <Layout location={location}>
     <BlogPageWrapper>
@@ -97,12 +89,6 @@ export default ({ data, location }) => (
             <BlogPost node={edge.node} />
           ))}
         </CardGrid>
-
-        <ul>
-          {data.allContentfulBlog.edges.map(edge => (
-            <CarouselImage node={edge.node} />
-          ))}
-        </ul>
       </ContentHolder>
       <Footer color="hsla(0,0%,8.6%,0.7)" />
     </BlogPageWrapper>

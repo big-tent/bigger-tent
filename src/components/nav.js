@@ -8,7 +8,7 @@ const Navbar = styled.nav`
   text-decoration: none;
   top: 1.5rem;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   h3 {
     color: ${props => props.navcolor};
   }

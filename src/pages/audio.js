@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -17,15 +18,34 @@ import Footer from "../components/footer"
 const CardTopper = styled.div`
   background: ${props => props.color};
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
-  height: 100px;
-  width: 110%;
+  height: 15%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+`
+
+const CardHeader = styled.h2`
+  color: #fefefe;
+  margin-top: 5px;
+  margin-left: 10px;
+`
+
+const CardImage = styled(Img)`
+  height: 50%;
+  object-fit: cover;
+  position: absolute;
+`
+
+const CardCopy = styled.p`
+  color: #161616;
+  padding: 20px 20px 0 20px;
 `
 
 export default ({ location, data }) => (
   <Layout location={location}>
     <SEO
       title="Audio"
-      keywords={[`voice `, `audio`, `flash briefing`, `Alexa`]}
+      keywords={[`voice`, `audio`, `flash briefing`, `Alexa`]}
     />
     <Topper color="hsla(0, 0%, 8.6%, 0.8)" />
     <Nav navcolor="hsl(31.6, 92.5%, 52.5%)" />
@@ -44,15 +64,25 @@ export default ({ location, data }) => (
       </BlurbMain>
       <CardGrid>
         <GridCard>
-          <CardTopper color="red">
-            <h2>Hello</h2>
+          <CardTopper color="hsl(30, 100%, 50%)">
+            <CardHeader>Voiceover</CardHeader>
           </CardTopper>
+          <CardImage fluid={data.bannerImage.childImageSharp.fluid} />
+          <CardCopy>Hello hello</CardCopy>
         </GridCard>
         <GridCard>
-          <CardTopper color="blue" />
+          <CardTopper color="hsl(30, 100%, 50%)">
+            <CardHeader>Audio production</CardHeader>
+          </CardTopper>
+          <CardImage fluid={data.bannerImage.childImageSharp.fluid} />
+          <CardCopy>Hello hello</CardCopy>
         </GridCard>
         <GridCard>
-          <CardTopper color="yellow" />
+          <CardTopper color="hsl(30, 100%, 50%)">
+            <CardHeader>Flash briefings</CardHeader>
+          </CardTopper>
+          <CardImage fluid={data.bannerImage.childImageSharp.fluid} />
+          <CardCopy>Hello hello</CardCopy>
         </GridCard>
       </CardGrid>
     </ContentHolder>

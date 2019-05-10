@@ -7,7 +7,7 @@ const ColouredTopper = styled.div`
   height: 15vh;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   /* :after {
     background: inherit;
     bottom: 0;

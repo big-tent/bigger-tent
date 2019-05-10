@@ -6,6 +6,7 @@ const GridCard = styled.li`
   border: 1px solid #3c3c3c;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
   transition: 1s all;
   :hover {
     box-shadow: 1px 3px 5px hsla(0, 0%, 0%, 0.7),
