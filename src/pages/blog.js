@@ -4,6 +4,7 @@ import Link from "gatsby-link"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Topper from "../components/topper"
 import Nav from "../components/nav"
@@ -79,6 +80,10 @@ const BlogPost = ({ node }) => {
 
 export default ({ data, location }) => (
   <Layout location={location}>
+    <SEO
+      title="Blog"
+      keywords={[`blog`, `audio`, `development`, `social`, `media`, `Big Tent`]}
+    />
     <BlogPageWrapper>
       <Topper color="hsla(0,0%,8.6%,0.7)" />
       <Nav navcolor="hsl(30, 100%, 50%)" />

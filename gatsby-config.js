@@ -10,7 +10,8 @@ module.exports = {
   siteMetadata: {
     title: `Big Tent`,
     description: `Big Tent Media web design, social media management and content creation`,
-    author: `Big Tent`
+    author: `Big Tent`,
+    siteUrl: `https://www.bigtent.media`
   },
   plugins: [
     {
@@ -32,6 +33,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
